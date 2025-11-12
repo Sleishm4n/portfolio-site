@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { Inter, Roboto_Mono } from "next/font/google";
+import './globals.css';
 
 const inter = Inter({
   variable: "--font-inter",
@@ -10,6 +11,7 @@ const robotoMono = Roboto_Mono({
   variable: "--font-roboto-mono",
   subsets: ["latin"],
 });
+
 export const metadata: Metadata = {
   title: "Sam Leishman | Portfolio",
   description: "Personal portfolio of Sam Leishman — Computing Science student at the University of Glasgow.",
@@ -20,10 +22,10 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${robotoMono.variable} antialiased bg-gray-50 text-gray-900`}>
-        
+      <body>
+
         <header className="p-4 shadow-md bg-white">
-          <nav className="flex justify-center gap-6">
+          <nav className="flex justify-center gap-60">
             <a href="/" className="hover:text-blue-600">Home</a>
             <a href="/projects" className="hover:text-blue-600">Projects</a>
             <a href="/about" className="hover:text-blue-600">About</a>
