@@ -1,4 +1,4 @@
-export default function Home() {
+export default function Projects() {
   return (
     <main>
       This is the Projects Page    

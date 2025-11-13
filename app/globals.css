@@ -1,6 +1,14 @@
 @import "tailwindcss";
 @tailwind utilities;
 
+@theme {
+  --color-polyGreen: #2C5530;
+  --color-rasin:  #191923;
+  --color-tang: #FF9D5C;
+  --color-silver: #CCCCCC;
+  --color-smoke: #F2F2F2;
+}
+
 /* Import your fonts (variables are defined in layout.tsx) */
 :root {
   --font-inter: 'Inter', sans-serif;
@@ -27,23 +35,6 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.5rem;
 }
 
-/* Links */
-a {
-  color: #2563EB; /* Tailwind blue-600 */
-  text-decoration: none;
-  transition: color 0.2s;
-}
-
-a:hover {
-  color: #1D4ED8; /* Darker blue */
-}
-
-/* Buttons */
-button {
-  font-family: var(--font-inter);
-  cursor: pointer;
-  transition: all 0.2s;
-}
 
 /* Utility for monospace text (like code snippets) */
 code, pre {
