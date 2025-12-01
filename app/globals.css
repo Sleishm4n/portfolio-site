@@ -18,8 +18,8 @@
 /* Global body styles */
 body {
   font-family: var(--font-inter);
-  background-color: #f9fafb; /* Tailwind gray-50 */
-  color: #111827; /* Tailwind gray-900 */
+  background-color: #535b51; 
+  color: #CCCCCC; 
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -48,4 +48,13 @@ code, pre {
   margin-right: auto;
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
 }
