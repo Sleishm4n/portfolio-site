@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 @import "tailwindcss";
 @tailwind utilities;
 
@@ -7,18 +10,40 @@
   --color-tang: #FF9D5C;
   --color-silver: #CCCCCC;
   --color-smoke: #F2F2F2;
+  --color-chineseBlack: #0D0F12;
+  --color-turquoise: #38F0B9;
+  --color-bryellow: #C59D62;
+  --color-honeydew: #E9FAF5;
+  --color-crayola: #F7D372;
+  --color-jungle: #1A1E24;
+  --font-bebas: "Bebas Neue", sans-serif;
+  --font-cinzel: 'Cinzel', 'serif';
 }
 
 /* Import your fonts (variables are defined in layout.tsx) */
 :root {
   --font-inter: 'Inter', sans-serif;
-  --font-roboto-mono: 'Roboto Mono', monospace;
+  --font-robotoMono: "Roboto Mono", monospace;
+  --font-cinzel: 'Cinzel', 'serif';
+  --font-bebas: "Bebas Neue", sans-serif;
+  --font-space: "Space Grotesk", sans-serif;
+  --color-polyGreen: #2C5530;
+  --color-rasin:  #191923;
+  --color-tang: #FF9D5C;
+  --color-silver: #CCCCCC;
+  --color-smoke: #F2F2F2;
+  --color-chineseBlack: #0D0F12;
+  --color-turquoise: #38F0B9;
+  --color-bryellow: #C59D62;
+  --color-honeydew: #E9FAF5;
+  --color-crayola: #F7D372;
+  --color-jungle: #1A1E24;
 }
 
 /* Global body styles */
 body {
   font-family: var(--font-inter);
-  background-color: #535b51; 
+  background-color: #0D0F12; 
   color: #CCCCCC; 
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -29,7 +54,6 @@ body {
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-inter);
   font-weight: 700;
   margin-top: 0;
   margin-bottom: 0.5rem;

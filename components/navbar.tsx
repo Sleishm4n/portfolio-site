@@ -1,10 +1,11 @@
 "use client";
 
+
 import Link from "next/link";
 
 export default function Navbar() {
     return (
-        <nav className="sticky top-0 flex items-center justify-between p-4 bg-linear-to-r from-polyGreen to-rasin rounded-b-3xl shadow-lg backdrop-blur-md text-white z-50">
+        <nav className="sticky top-0 flex items-center justify-between p-4 bg-linear-to-r from-polyGreen/50 to-rasin/50 rounded-b-3xl shadow-lg backdrop-blur-md text-white z-50">
         <h1 className="text-3xl font-bold underline animate-float">
             Sam Leishman
         </h1>
