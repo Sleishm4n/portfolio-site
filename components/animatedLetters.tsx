@@ -52,7 +52,7 @@ export default function AnimatedLetters({ text }: {text : string}) {
   return (
     <><div className="flex flex-col items-center">
       <div className="flex flex-col items-center gap-6">
-        <motion.h1 className="text-6xl font-bold font-cinzel flex flex-wrap justify-center">
+        <motion.h1 className="text-4xl sm:text-6xl font-bold font-cinzel flex flex-wrap justify-center">
           {display.map((item, index) => (
             <motion.span
               key={index}
@@ -64,7 +64,7 @@ export default function AnimatedLetters({ text }: {text : string}) {
           ))}
         </motion.h1>
       </div>
-      <div className="justify-center w-24">
+      <div className="justify-center w-1/4">
           <ShuffleButton onClick={shuffle} />
       </div>
     </div></>
