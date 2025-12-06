@@ -82,3 +82,9 @@ code, pre {
 .animate-float {
   animation: float 3s ease-in-out infinite;
 }
+
+.orbit-btn {
+  @apply px-4 py-2 rounded-xl bg-jungle text-white font-semibold
+         shadow-lg hover:scale-110 hover:bg-jungle/80
+         transition-all duration-200;
+}

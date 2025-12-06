@@ -1,6 +1,7 @@
+"use client";
 import yose from './yose.jpg';
 import AnimatedLetters from '@/components/animatedLetters';
-import Button from '@/components/button';
+import NavButton from '@/components/navButton';
 
 export default function Home() {
   return (
@@ -18,11 +19,16 @@ export default function Home() {
             <AnimatedLetters text="Sam Leishman" />
         </div>
         <div className='flex items-center justify-center '>
-            <p className='font-robotoMono'>Third year computing science student at the University of Glasgow</p>
+            <p className='font-robotoMono'>
+                Third year computing science student at the University of Glasgow
+            </p>
         </div>
-        <Button text="About" href="./about/" />
-        <Button text="Contact" href="./contact/" />
-        <Button text="Projects" href="./projects/" />      
+        <div className='flex flex-row gap-5 justify-between m-5'>
+            <NavButton text="About" href="./about/" />
+            <NavButton text="Skills" href="./skills/" />      
+            <NavButton text="Projects" href="./projects/" />      
+            <NavButton text="Contact" href="./contact/" />
+        </div>
     </main>
   );
 }
