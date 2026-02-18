@@ -1,34 +1,96 @@
 "use client";
-import yose from './yose.jpg';
+import Image from 'next/image';
 import AnimatedLetters from '@/components/animatedLetters';
-import NavButton from '@/components/navButton';
+import ProjectCard, { Project } from '@/components/projectCard';
+import ShuffleButton from '@/components/shuffleButton';
+import { useState } from 'react';
 
 export default function Home() {
-  return (
-    <main className="h-screen w-full bg-bg flex flex-col items-center justify-center text-center ">
-        <div className="flex items-center justify-center">
-            <div className="w-75 h-80 rounded-full flex items-center justify-center text-4xl font-bold text-gray-900 shadow-2xl pb-5">
-                <img 
-                    src={yose.src} 
-                    alt="Yose" 
-                    className="w-full h-full object-cover rounded-full"
-                />
-            </div>
-        </div>
-        <div className="flex items-center justify-center">  
-            <AnimatedLetters text="Sam Leishman" />
-        </div>
-        <div className='flex items-center justify-center '>
-            <p className='font-robotoMono'>
-                Third year computing science student at the University of Glasgow
-            </p>
-        </div>
-        <div className='grid grid-cols-2 sm:flex sm:flex-row gap-5 justify-between m-5'>
-            <NavButton text="About" href="./about/" />
-            <NavButton text="Skills" href="./skills/" />      
-            <NavButton text="Projects" href="./projects/" />      
-            <NavButton text="Contact" href="./contact/" />
-        </div>
-    </main>
-  );
+    const [shuffle, setShuffle] = useState<() => void>(() => () => {});
+
+    const PROJECTS: Project[] = [
+        {
+            title: "Password Stength Evaluator",
+            subtitle: "Machine Learning",
+            description: "A defensive password-strength checker using statistical patterns from leaked datasets. Combines entropy analysis, pattern detection, and ML models to estimate password predictability — without storing or cracking passwords.",
+            tags: ["Python", "scikit-learn", "NLP", "Security", "ML"],
+            href: "https://github.com/Sleishm4n/PasswordStrengthChecker"
+        },
+        {
+            title: "Multi-Language Sudoku Solver",
+            subtitle: "Algorithms & Languages",
+            description: "A comprehensive exploration of Sudoku solving across Python, Rust, C++ and Java. Covers backtracking, constraint solving, and stochastic algorithms across 9×9 and 16×16 grids.",
+            tags: ["Python", "Rust", "C++", "Java", "Backtracking", "CSP"],
+            href: "https://github.com/Sleishm4n/Sudokus"
+        },
+        // {
+        //     title: "Personal Portfolio",
+        //     subtitle: "Design & Development",
+        //     description: "This site — a minimal, dark portfolio built with Next.js and Tailwind. Features a bubble-sort letter animation, transparent overlay navigation, and a continuous single-page layout.",
+        //     tags: ["Next.js", "TypeScript", "Tailwind", "Framer Motion"],
+        //     href: "https://github.com/..."
+        // },
+        {
+            title: "Git Auto-Commit",
+            subtitle: "Developer Tooling & ML",
+            description: "A CLI tool that generates commit messages from git diffs — starting with heuristic rules, then upgraded to a local LLM for semantic understanding.",
+            tags: ["Python", "LLM", "CLI", "NLP", "Git"],
+            href: "https://github.com/Sleishm4n/auto-git-commit"
+        },
+    ];
+
+    return (
+        <main className="min-h-screen w-full bg-bg flex flex-col items-center text-center">
+            
+            {/* Hero */}
+            <section className="h-screen flex flex-col items-center justify-center text-center px-6">
+                <div className="flex items-center justify-center">
+                    <div className="w-75 h-80 rounded-full flex items-center justify-center shadow-2xl pb-5">
+                        <Image 
+                            src="/yose.jpg"
+                            alt="Yose" 
+                            className="w-full h-full object-cover rounded-full"
+                            width={500}
+                            height={500}
+                        />
+                    </div>
+                </div>
+                <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">  
+                    <AnimatedLetters text="Sam Leishman" onShuffleReady={(fn) => setShuffle(() => fn)} />
+                    <p className="font-cinzel text-lg text-gray-400">
+                        Computing Science Student : University of Glasgow
+                    </p>
+                    <div className="flex justify-center mt-4">
+                        <ShuffleButton onClick={shuffle} />
+                    </div>
+                </div>
+            </section>
+
+            {/* About */}
+            <section id="about" className="min-h-screen flex flex-col items-center justify-center px-10 py-20">
+                <h2 className="font-cinzel text-sm tracking-[0.2em] uppercase text-white/40 mb-6">About</h2>
+            </section>
+
+            {/* Projects */}
+            <section id="projects" className="min-h-screen flex flex-col items-center justify-center px-10 py-20">
+                <h2 className="font-cinzel text-sm tracking-[0.2em] uppercase text-white/40 mb-6">Projects</h2>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 w-full">
+                    {PROJECTS.map((project) => (
+                        <ProjectCard key={project.title} {...project} />
+                    ))}
+                </div>
+            </section>
+
+            {/* Skills */}
+            <section id="skills" className="min-h-screen flex flex-col items-center justify-center px-10 py-20">
+                <h2 className="font-cinzel text-sm tracking-[0.2em] uppercase text-white/40 mb-6">Skills</h2>
+            </section>
+
+            {/* Contact */}
+            <section id="contact" className="min-h-screen flex flex-col items-center justify-center px-10 py-20">
+                <h2 className="font-cinzel text-sm tracking-[0.2em] uppercase text-white/40 mb-6">Contact</h2>
+            </section>
+
+        </main>
+    );
 }

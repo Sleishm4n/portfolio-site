@@ -88,3 +88,7 @@ code, pre {
          shadow-lg hover:scale-110 hover:bg-jungle/80
          transition-all duration-200;
 }
+
+html {
+  scroll-behavior: smooth;
+}

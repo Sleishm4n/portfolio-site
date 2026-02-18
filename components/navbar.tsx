@@ -1,23 +1,45 @@
 "use client";
-
-
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import NavButton from "./navButton";
+
+const NAV_ITEMS = [
+  { text: "About", href: "#about" },
+  { text: "Projects", href: "#projects" },
+  { text: "Skills", href: "#skills" },
+  { text: "Contact", href: "#contact" },
+] as const;
 
 export default function Navbar() {
-    return (
-        <nav className="sticky w-24 top-0 flex items-center justify-center p-4 bg-linear-to-r from-crayola/50 to-chineseBlack/50 rounded-b-3xl shadow-lg backdrop-blur-md text-white z-50">
+  const pathname = usePathname();
 
+  return (
+    <nav
+      className="sticky top-0 left-0 right-0 z-50 
+                 flex items-center justify-between 
+                 px-10 py-6 mb-auto"
+      role="navigation"
+      aria-label="Main navigation"
+    >
+      <Link
+        href="/"
+        className="font-cinzel text-white/60 text-sm tracking-[0.2em] uppercase
+                   hover:text-white transition-colors duration-500"
+        aria-label="Home - Sam Leishman"
+      >
+        Sam Leishman
+      </Link>
 
-        <div className=" flex">
-            <Link
-                key={"Home"}
-                href={`/home`}
-                className="relative hover:text-silver transition-colors duration-300"
-            >
-                {"Home"}
-                <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-silver transition-all duration-300 hover:w-full"></span>
-            </Link>
-        </div>
-        </nav>
-    );
+      <div className="flex items-center gap-8">
+        {NAV_ITEMS.map((item) => (
+          <NavButton
+            key={item.text}
+            text={item.text}
+            href={item.href}
+            isActive={pathname === item.href}
+          />
+        ))}
+      </div>
+    </nav>
+  );
 }

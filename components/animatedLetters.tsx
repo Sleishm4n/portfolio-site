@@ -4,7 +4,10 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import ShuffleButton from "./shuffleButton";
 
-export default function AnimatedLetters({ text }: {text : string}) {
+export default function AnimatedLetters({ text, onShuffleReady }: { 
+  text: string, 
+  onShuffleReady?: (fn: () => void) => void 
+}) {
   const letters = text.split("");
   // Create array with {char, index} so duplicates are tracked
   const target = letters.map((char: any, idx: any) => ({ char, idx }));
@@ -48,25 +51,23 @@ export default function AnimatedLetters({ text }: {text : string}) {
     setDisplay(shuffled);
     startSortAnimation(shuffled);
   };
+
+    
+  useEffect(() => {
+    onShuffleReady?.(shuffle);
+  }, []);
   
   return (
-    <><div className="flex flex-col items-center">
-      <div className="flex flex-col items-center gap-6">
-        <motion.h1 className="text-4xl sm:text-6xl font-bold font-cinzel flex flex-wrap justify-center">
-          {display.map((item, index) => (
-            <motion.span
-              key={index}
-              className="mx-1 cursor-default"
-              whileHover={{ scale: 1.2, color: "#38F0B9" }}
-            >
-              {item.char === " " ? "\u00A0" : item.char}
-            </motion.span>
-          ))}
-        </motion.h1>
-      </div>
-      <div className="justify-center w-1/4">
-          <ShuffleButton onClick={shuffle} />
-      </div>
-    </div></>
+    <motion.h1 className="text-4xl sm:text-6xl font-bold font-cinzel flex flex-wrap justify-center">
+      {display.map((item, index) => (
+        <motion.span
+          key={index}
+          className={`cursor-default ${item.char === " " ? "mx-3" : "mx-1"}`}
+          whileHover={{ scale: 1.2, color: "#8a5dd9" }}
+        >
+          {item.char === " " ? "\u00A0" : item.char}
+        </motion.span>
+      ))}
+    </motion.h1>
   );
 }
