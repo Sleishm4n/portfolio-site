@@ -4,9 +4,10 @@ interface NavButtonProps {
   text: string;
   href: string;
   isActive?: boolean;
+  onClick?: () => void;
 }
 
-export default function NavButton({ text, href, isActive = false }: NavButtonProps) {
+export default function NavButton({ text, href, isActive = false, onClick  }: NavButtonProps) {
   return (
     <a
       href={href}
@@ -17,6 +18,7 @@ export default function NavButton({ text, href, isActive = false }: NavButtonPro
         ${isActive ? "text-white" : "text-white/40 hover:text-white/80"}
       `}
       aria-current={isActive ? "page" : undefined}
+      onClick={onClick}
     >
       {text}
       {/* Thin underline that grows from center */}

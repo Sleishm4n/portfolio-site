@@ -58,11 +58,11 @@ export default function AnimatedLetters({ text, onShuffleReady }: {
   }, []);
   
   return (
-    <motion.h1 className="text-4xl sm:text-6xl font-bold font-cinzel flex flex-wrap justify-center">
+    <motion.h1 className="text-2xl sm:text-6xl font-bold font-cinzel flex flex-wrap justify-center">
       {display.map((item, index) => (
         <motion.span
           key={index}
-          className={`cursor-default ${item.char === " " ? "mx-3" : "mx-1"}`}
+          className={`cursor-default ${item.char === " " ? "mx-1 sm:mx-3" : "mx-0.5 sm:mx-1"}`}
           whileHover={{ scale: 1.2, color: "#8a5dd9" }}
         >
           {item.char === " " ? "\u00A0" : item.char}

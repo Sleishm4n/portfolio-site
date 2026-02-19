@@ -23,13 +23,6 @@ export default function Home() {
             tags: ["Python", "Rust", "C++", "Java", "Backtracking", "CSP"],
             href: "https://github.com/Sleishm4n/Sudokus"
         },
-        // {
-        //     title: "Personal Portfolio",
-        //     subtitle: "Design & Development",
-        //     description: "This site — a minimal, dark portfolio built with Next.js and Tailwind. Features a bubble-sort letter animation, transparent overlay navigation, and a continuous single-page layout.",
-        //     tags: ["Next.js", "TypeScript", "Tailwind", "Framer Motion"],
-        //     href: "https://github.com/..."
-        // },
         {
             title: "Git Auto-Commit",
             subtitle: "Developer Tooling & ML",
@@ -45,7 +38,7 @@ export default function Home() {
             {/* Hero */}
             <section className="h-screen flex flex-col items-center justify-center text-center px-6">
                 <div className="flex items-center justify-center">
-                    <div className="w-75 h-80 rounded-full flex items-center justify-center shadow-2xl pb-5">
+                    <div className="w-48 h-48 md:w-75 md:h-80 rounded-full flex items-center justify-center shadow-2xl md:pb-5">
                         <Image 
                             src="/yose.jpg"
                             alt="Yose" 
@@ -57,7 +50,7 @@ export default function Home() {
                 </div>
                 <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">  
                     <AnimatedLetters text="Sam Leishman" onShuffleReady={(fn) => setShuffle(() => fn)} />
-                    <p className="font-cinzel text-lg text-gray-400">
+                    <p className="font-cinzel text-sm md:text-lg text-gray-400">
                         Computing Science Student : University of Glasgow
                     </p>
                     <div className="flex justify-center mt-4">
