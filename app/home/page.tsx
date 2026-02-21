@@ -4,6 +4,8 @@ import AnimatedLetters from '@/components/animatedLetters';
 import ProjectCard, { Project } from '@/components/projectCard';
 import ShuffleButton from '@/components/shuffleButton';
 import { useState } from 'react';
+import { Github, Mail, Linkedin  } from "@deemlol/next-icons";
+import NowPlaying from '@/components/nowPlaying';
 
 export default function Home() {
     const [shuffle, setShuffle] = useState<() => void>(() => () => {});
@@ -53,9 +55,13 @@ export default function Home() {
                     <p className="font-cinzel text-sm md:text-lg text-gray-400">
                         Computing Science Student : University of Glasgow
                     </p>
-                    <div className="flex justify-center mt-4">
+                    <div className="flex justify-center mb-2.5">
                         <ShuffleButton onClick={shuffle} />
                     </div>
+                    <div>
+                        <NowPlaying />
+                    </div>
+                    
                 </div>
             </section>
 
@@ -82,6 +88,36 @@ export default function Home() {
             {/* Contact */}
             <section id="contact" className="min-h-screen flex flex-col items-center justify-center px-10 py-20">
                 <h2 className="font-cinzel text-sm tracking-[0.2em] uppercase text-white/40 mb-6">Contact</h2>
+                <p className="font-cinzel text-sm tracking-[0.2em] uppercase text-white/70 mb-6">
+                    Feel free to reach out to me through email or Linkedin, or just checkout my github
+                </p>
+                <div className="items-center justify-center grid grid-cols-1 sm:grid-cols-3 gap-6 w-full">
+                    <a           
+                        href="https://github.com/Sleishm4n"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex flex-col items-center gap-2 group"
+                    >
+                        <Github size={32} color="#6b2ca5" className="group-hover:opacity-70 transition-opacity" />
+                        <span className="font-cinzel text-xs tracking-widest text-white/40 group-hover:text-white/70 transition-colors">GitHub</span>
+                    </a>
+                    <a
+                        href="mailto:sam.g.leishman@gmail.com"
+                        className="flex flex-col items-center gap-2 group"
+                    >
+                        <Mail size={32} color="#6b2ca5" className="group-hover:opacity-70 transition-opacity" />
+                        <span className="font-cinzel text-xs tracking-widest text-white/40 group-hover:text-white/70 transition-colors">Email</span>
+                    </a>
+                    <a
+                        href="https://www.linkedin.com/in/sam-leishman-0a174528b/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex flex-col items-center gap-2 group"
+                    >
+                        <Linkedin size={32} color="#6b2ca5" className="group-hover:opacity-70 transition-opacity" />
+                        <span className="font-cinzel text-xs tracking-widest text-white/40 group-hover:text-white/70 transition-colors">LinkedIn</span>
+                    </a>
+                </div>
             </section>
 
         </main>

@@ -9,8 +9,9 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@deemlol/next-icons": "^0.1.9",
     "@tsparticles/react": "^3.0.0",
-    "framer-motion": "^12.23.25",
+    "framer-motion": "^12.34.3",
     "lucide-react": "^0.563.0",
     "next": "^16.0.7",
     "react": "19.2.0",
@@ -23,8 +24,8 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "baseline-browser-mapping": "^2.9.19",
-    "eslint": "^9",
-    "eslint-config-next": "16.0.2",
+    "eslint": "^10.0.0",
+    "eslint-config-next": "^0.2.4",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

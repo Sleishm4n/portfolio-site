@@ -21,7 +21,6 @@ export default function NavButton({ text, href, isActive = false, onClick  }: Na
       onClick={onClick}
     >
       {text}
-      {/* Thin underline that grows from center */}
       <span
         className={`
           absolute -bottom-1 left-1/2 -translate-x-1/2 h-px bg-purple-600
