@@ -6,9 +6,14 @@ import ShuffleButton from '@/components/shuffleButton';
 import { useState } from 'react';
 import { Github, Mail, Linkedin  } from "@deemlol/next-icons";
 import NowPlaying from '@/components/nowPlaying';
+import SkillCard from '@/components/skillCard';
 
 export default function Home() {
     const [shuffle, setShuffle] = useState<() => void>(() => () => {});
+    const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+    const [tappedIndex, setTappedIndex] = useState<number | null>(null);
+
+    const activeIndex = hoveredIndex ?? tappedIndex;
 
     const PROJECTS: Project[] = [
         {
@@ -32,6 +37,10 @@ export default function Home() {
             tags: ["Python", "LLM", "CLI", "NLP", "Git"],
             href: "https://github.com/Sleishm4n/auto-git-commit"
         },
+    ];
+
+    const SKILLS: string[] = [
+        "Python", "Java", "Git", "C/C++", "Machine Learning", "Testing and Debugging", "Linux", "Docker", "React",
     ];
 
     return (
@@ -83,15 +92,28 @@ export default function Home() {
             {/* Skills */}
             <section id="skills" className="min-h-screen flex flex-col items-center justify-center px-10 py-20">
                 <h2 className="font-cinzel text-sm tracking-[0.2em] uppercase text-white/40 mb-6">Skills</h2>
+                {/* <AnimatedSkills /> */}
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 w-full">
+                    {SKILLS.map((skill, i) => (
+                        <SkillCard
+                            key={skill}
+                            skill={skill}
+                            isHovered={activeIndex === null ? null : activeIndex === i ? true : false}
+                            onHover={() => setHoveredIndex(i)}
+                            onLeave={() => setHoveredIndex(null)}
+                            onTap={() => setTappedIndex(prev => prev === i ? null : i)}
+                        />
+                    ))}
+                </div>
             </section>
 
             {/* Contact */}
             <section id="contact" className="min-h-screen flex flex-col items-center justify-center px-10 py-20">
                 <h2 className="font-cinzel text-sm tracking-[0.2em] uppercase text-white/40 mb-6">Contact</h2>
-                <p className="font-cinzel text-sm tracking-[0.2em] uppercase text-white/70 mb-6">
+                <p className="font-cinzel text-xs sm:text-sm tracking-[0.2em] uppercase text-white/70 mb-6">
                     Feel free to reach out to me through email or Linkedin, or just checkout my github
                 </p>
-                <div className="items-center justify-center grid grid-cols-1 sm:grid-cols-3 gap-6 w-full">
+                <div className="items-center justify-center grid grid-cols-3 gap-6 w-full">
                     <a           
                         href="https://github.com/Sleishm4n"
                         target="_blank"
