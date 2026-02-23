@@ -17,7 +17,7 @@ export default function Home() {
 
     const PROJECTS: Project[] = [
         {
-            title: "Password Stength Evaluator",
+            title: "Password Strength Evaluator",
             subtitle: "Machine Learning",
             description: "A defensive password-strength checker using statistical patterns from leaked datasets. Combines entropy analysis, pattern detection, and ML models to estimate password predictability — without storing or cracking passwords.",
             tags: ["Python", "scikit-learn", "NLP", "Security", "ML"],
