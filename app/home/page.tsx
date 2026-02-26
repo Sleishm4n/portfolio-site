@@ -160,23 +160,24 @@ export default function Home() {
                 <h2 className="font-cinzel text-sm tracking-[0.2em] uppercase text-white/40 mb-6">About</h2>
                 <div className="w-14 h-px bg-linear-to-r from-purple-400 to-transparent mb-2" />
                 <div className="w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
-                    <div className="flex flex-col gap-5 text-left">
+                    <div className="flex flex-col gap-5 text-center">
                         <p className="font-cinzel text-white/60 text-sm leading-loose font-light tracking-wide">
-                            I'm Sam. A Comp-Sci student who loves to solve problems and build things that interest me by tying in personal 
-                            ideas with my current academic topics. I spend a lot of my time at university making projects that help me grow 
-                            as a software engineer across different areas, machine learning and algorithms mainly.
+                            Hi I'm Sam a third year comp-sci student at the University of Glasgow. My university projects 
+                            have helped me grow as a software engineer in different areas including machine learning, 
+                            algorithms and networking. I love solving problems and building things that tie in my personal
+                             interests and my academic coursework.
                         </p>
                         <p className="font-cinzel text-white/60 text-sm leading-loose font-light tracking-wide">
-                            Outside of coursework, I spend a fair amount of time tinkering with personal projects. I've always enjoyed maths 
-                            and physics as well and they've definitely shaped the way I approach problems and enjoy seeing how they continue 
-                            to tie in with my studies.
+                            When I'm not at university I spend most of my time on personal projects. My favourite to date is 
+                            the PasswordStrengthChecker which highlights my skills in machine learning. I've always enjoyed 
+                            maths and physics and seeing how they shape my approach to problems.
                         </p>
                         <p className="font-cinzel text-white/60 text-sm leading-loose font-light tracking-wide">
-                            When I'm not coding, I'm probably baking, playing video games or consuming some work of science fiction. I also 
-                            have a deep love for music so will likely have my headphones in.
+                            When I'm not coding, you'll find me playing video games or consuming some work of science fiction. 
+                            I also play the bagpipes which is where my love from music came from.
                         </p>
                         <p className="font-cinzel text-white/60 text-sm leading-loose font-light tracking-wide">
-                            I'm always looking for the next challenge...
+                            I am a optimistic, hard working and results driven individual who's always up for a challenge...
                         </p>
                     </div>
                     <div className="flex flex-col gap-3">
