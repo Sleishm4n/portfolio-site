@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { motion } from "framer-motion";
 import ShuffleButton from "./shuffleButton";
 
@@ -10,7 +10,14 @@ export default function AnimatedLetters({ text, onShuffleReady }: {
 }) {
   const letters = text.split("");
   // Create array with {char, index} so duplicates are tracked
-  const target = letters.map((char: any, idx: any) => ({ char, idx }));
+  const target = useMemo(
+    () => letters.map((char, idx) => ({ char, idx })),
+    [text]
+  );
+
+  async function sleep(ms: number): Promise<void> {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+  }
 
   // Shuffle function
   const shuffleArray = (arr: any[]) => {
@@ -20,7 +27,7 @@ export default function AnimatedLetters({ text, onShuffleReady }: {
       .map(({ char, idx }) => ({ char, idx }));
   };
 
-  const [display, setDisplay] = useState(shuffleArray([...target]));
+  const [display, setDisplay] = useState(target);
 
   const startSortAnimation = (arr: any[]) => {
     let copy = [...arr];
@@ -43,7 +50,14 @@ export default function AnimatedLetters({ text, onShuffleReady }: {
   };
 
   useEffect(() => {
-    startSortAnimation(display);
+    const run = async () => {
+      await sleep(1000);
+      const shuffled = await shuffleArray([...target]);
+      setDisplay(shuffled);
+      startSortAnimation(shuffled);
+    };
+
+    run();
   }, []);
 
   const shuffle = () => {
@@ -60,7 +74,7 @@ export default function AnimatedLetters({ text, onShuffleReady }: {
   return (
     <motion.h1 className="text-2xl sm:text-6xl font-bold font-cinzel flex flex-wrap justify-center">
       {display.map((item, index) => (
-        <motion.span
+        <motion.span layout
           key={index}
           className={`cursor-default ${item.char === " " ? "mx-1 sm:mx-3" : "mx-0.5 sm:mx-1"}`}
           whileHover={{ scale: 1.2, color: "#8a5dd9" }}
