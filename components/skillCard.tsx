@@ -24,7 +24,7 @@ export default function SkillCard({ skill, isHovered, onHover, onLeave, onTap }:
             transition={{ duration: 0.2 }}
             className="group relative px-4 py-3 font-cinzel
                         border border-white/10 hover:border-white/25
-                        transition-colors duration-500 cursor-default text-left h-full items-center"
+                        transition-colors duration-500 cursor-pointer text-left h-full items-center"
         >
             <span className="absolute top-0 left-0 w-2 h-px bg-purple-500/60" aria-hidden="true" />
             <span className="absolute top-0 left-0 w-px h-2 bg-purple-500/60" aria-hidden="true" />

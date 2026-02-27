@@ -28,7 +28,13 @@ export default function NowPlaying() {
 
     if (!song.isPlaying) {
         return (
-            <div className="flex items-center gap-3 px-4 py-2 rounded-full border border-white/10 bg-white/5 mx-auto">
+            <div className="group relative flex items-center px-4 py-3 font-cinzel
+                border border-white/10 hover:border-white/25
+                transition-colors duration-500 cursor-default text-left h-full">
+                <span className="absolute top-0 left-0 w-2 h-px bg-purple-500/60" aria-hidden="true" />
+                <span className="absolute top-0 left-0 w-px h-2 bg-purple-500/60" aria-hidden="true" />
+                <span className="absolute bottom-0 right-0 w-2 h-px bg-purple-500/60" aria-hidden="true" />
+                <span className="absolute bottom-0 right-0 w-px h-2 bg-purple-500/60" aria-hidden="true" />
                 <span className="font-cinzel text-xs tracking-widest text-white/30">Sam's not listening to anything right now</span>
             </div>
         );
@@ -39,8 +45,14 @@ export default function NowPlaying() {
             href={song.songUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-3 px-4 py-2 rounded-full border border-white/10 bg-white/5 hover:border-purple-600/70 transition-colors group"
+            className="group relative flex items-center gap-3 px-4 py-3 font-cinzel
+                border border-white/10 hover:border-white/25
+                transition-colors duration-500 cursor-pointer text-left h-full"
         >
+            <span className="absolute top-0 left-0 w-2 h-px bg-purple-500/60" aria-hidden="true" />
+            <span className="absolute top-0 left-0 w-px h-2 bg-purple-500/60" aria-hidden="true" />
+            <span className="absolute bottom-0 right-0 w-2 h-px bg-purple-500/60" aria-hidden="true" />
+            <span className="absolute bottom-0 right-0 w-px h-2 bg-purple-500/60" aria-hidden="true" />
             {song.albumArt && (
                 <Image
                     src={song.albumArt}
@@ -63,7 +75,7 @@ export default function NowPlaying() {
                 {[1, 2, 3].map((i) => (
                     <div
                         key={i}
-                        className="w-[3px] bg-purple-600 rounded-full animate-bounce"
+                        className="w-0.75 bg-purple-600 rounded-full animate-bounce"
                         style={{ animationDelay: `${i * 0.15}s`, height: `${i * 4 + 4}px` }}
                     />
                 ))}
