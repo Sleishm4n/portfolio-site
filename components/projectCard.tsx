@@ -13,7 +13,7 @@ export default function ProjectCard({ title, subtitle, description, tags, image,
     const content = (
         <div className="group relative px-8 py-6 font-cinzel
                         border border-white/10 hover:border-white/25
-                        transition-all duration-500 cursor-default text-left h-full">
+                        transition-all duration-500 cursor-pointer text-left h-full">
             {/* Corner accents */}
             <span className="absolute top-0 left-0 w-4 h-px bg-purple-500/60" aria-hidden="true" />
             <span className="absolute top-0 left-0 w-px h-4 bg-purple-500/60" aria-hidden="true" />

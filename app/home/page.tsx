@@ -183,6 +183,7 @@ export default function Home() {
                     <div className="flex flex-col gap-3">
                         {ABOUTS.map(({ label, value, sub }, i) => (
                             <AboutCard
+                                key={label}
                                 label= {label}
                                 value = {value}
                                 sub = {sub}
@@ -228,6 +229,7 @@ export default function Home() {
             {/* Contact */}
             <section id="contact" className="min-h-screen flex flex-col items-center justify-center px-10 py-20">
                 <h2 className="font-cinzel text-sm tracking-[0.2em] uppercase text-white/40 mb-6">Contact</h2>
+                <div className="w-14 h-px bg-linear-to-r from-purple-400 to-transparent mb-2" />
                 <p className="font-cinzel text-xs sm:text-sm tracking-[0.2em] uppercase text-white/70 mb-6">
                     Feel free to reach out to me through email or Linkedin, or just checkout my github
                 </p>
