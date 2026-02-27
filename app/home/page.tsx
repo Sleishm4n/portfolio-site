@@ -101,7 +101,7 @@ export default function Home() {
         },
         {
             label: "Favourite Superhero", value: "SpiderMan",
-            sub: '“With great power comes great responsibilty”',
+            sub: '“With great power comes great responsibility',
             isHovered: null,
             onHover: function (): void {
                 throw new Error('Function not implemented.');
@@ -111,7 +111,7 @@ export default function Home() {
             }
         },
         {
-            label: "Currently reading", value: "Childern of Dune",
+            label: "Currently reading", value: "Children of Dune",
             sub: '“Most deadly errors arise from obsolete assumptions.”',
             isHovered: null,
             onHover: function (): void {
@@ -177,7 +177,7 @@ export default function Home() {
                             I also play the bagpipes which is where my love from music came from.
                         </p>
                         <p className="font-cinzel text-white/60 text-sm leading-loose font-light tracking-wide">
-                            I am a optimistic, hard working and results driven individual who's always up for a challenge...
+                            I am an optimistic, hard working and results driven individual who's always up for a challenge...
                         </p>
                     </div>
                     <div className="flex flex-col gap-3">
