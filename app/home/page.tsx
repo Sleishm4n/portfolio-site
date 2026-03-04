@@ -6,7 +6,6 @@ import ShuffleButton from '@/components/shuffleButton';
 import { useState } from 'react';
 import { Github, Mail, Linkedin  } from "@deemlol/next-icons";
 import NowPlaying from '@/components/nowPlaying';
-import SkillCard from "@/components/skillCard"
 import AboutCard, { AboutCardProps } from '@/components/aboutCard';
 import { SKILLS } from '@/lib/skills-data'
 import SkillsGrid from '@/components/skillsGrid';

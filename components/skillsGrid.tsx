@@ -13,6 +13,8 @@ export default function SkillsGrid({ skills }: SkillsGridProps) {
     const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
     const firstRect = useRef<DOMRect | null>(null);
     const expandedRef = useRef<HTMLDivElement>(null);
+    const [activeIndex, setHoveredIndex] = useState<number | null>(null);
+
 
     useLayoutEffect(() => {
         if (selectedIndex === null || !firstRect.current || !gridRef.current) return;
@@ -46,6 +48,9 @@ export default function SkillsGrid({ skills }: SkillsGridProps) {
                         ref={(el) => { cardRefs.current[i] = el; }}
                         key={skill.name}
                         skill={skill}
+                        isHovered={activeIndex === null ? null : activeIndex === i ? true : false}
+                        onHover={() => setHoveredIndex(i)}
+                        onLeave={() => setHoveredIndex(null)}
                         faded={selectedIndex !== null && selectedIndex !== i}
                         onClick={() => {
                             firstRect.current = cardRefs.current[i]?.getBoundingClientRect() ?? null;
