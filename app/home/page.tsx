@@ -6,8 +6,10 @@ import ShuffleButton from '@/components/shuffleButton';
 import { useState } from 'react';
 import { Github, Mail, Linkedin  } from "@deemlol/next-icons";
 import NowPlaying from '@/components/nowPlaying';
-import SkillCard from '@/components/skillCard';
+import SkillCard from "@/components/skillCard"
 import AboutCard, { AboutCardProps } from '@/components/aboutCard';
+import { SKILLS } from '@/lib/skills-data'
+import SkillsGrid from '@/components/skillsGrid';
 
 export default function Home() {
     const [shuffle, setShuffle] = useState<() => void>(() => () => {});
@@ -38,10 +40,6 @@ export default function Home() {
             tags: ["Python", "LLM", "CLI", "NLP", "Git"],
             href: "https://github.com/Sleishm4n/auto-git-commit"
         },
-    ];
-
-    const SKILLS: string[] = [
-        "Python", "Java", "Git", "C/C++", "Machine Learning", "Testing and Debugging", "Linux", "Docker", "React",
     ];
 
     const ABOUTS: AboutCardProps[] = [
@@ -212,18 +210,7 @@ export default function Home() {
                 <h2 className="font-cinzel text-sm tracking-[0.2em] uppercase text-white/40 mb-6">Skills</h2>
                 <div className="w-14 h-px bg-linear-to-r from-purple-400 to-transparent mb-2" />
                 {/* <AnimatedSkills /> */}
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 w-full">
-                    {SKILLS.map((skill, i) => (
-                        <SkillCard
-                            key={skill}
-                            skill={skill}
-                            isHovered={activeIndex === null ? null : activeIndex === i ? true : false}
-                            onHover={() => setHoveredIndex(i)}
-                            onLeave={() => setHoveredIndex(null)}
-                            onTap={() => setTappedIndex(prev => prev === i ? null : i)}
-                        />
-                    ))}
-                </div>
+                <SkillsGrid skills={SKILLS} />
             </section>
 
             {/* Contact */}
