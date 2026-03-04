@@ -14,6 +14,9 @@ export interface Skill {
 interface SkillCardProps {
     skill: Skill;
     faded: boolean;
+    isHovered: boolean | null;
+    onHover: () => void;
+    onLeave: () => void;
     onClick: () => void;
 }
 
@@ -25,7 +28,7 @@ const PROFICIENCY_BARS: Record<Skill["level"], number> = {
 
 
 const SkillCard = forwardRef<HTMLDivElement, SkillCardProps>(
-    ({skill, faded, onClick }, ref) => {
+    ({skill, faded, isHovered , onClick, onHover, onLeave }, ref) => {
         const bars = PROFICIENCY_BARS[skill.level];
 
         return (
@@ -33,6 +36,12 @@ const SkillCard = forwardRef<HTMLDivElement, SkillCardProps>(
                 ref={ref}
                 onClick={onClick}
                 onKeyDown={(e) => e.key === "Enter" && onClick()}
+                animate={{
+                    scale: isHovered === true ? 1.08 : isHovered === false ? 0.93 : 1,
+                    opacity: isHovered === true ? 1 : isHovered === false ? 0.35 : 1,
+                }}
+                onHoverStart={onHover}
+                onHoverEnd={onLeave}
                 tabIndex={0}
                 aria-label={`${skill.name}, click to expand`}
                 style={{ opacity: faded ? 0.3 : 1 }}
