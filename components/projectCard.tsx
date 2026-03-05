@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 
 export interface Project {
@@ -7,11 +8,23 @@ export interface Project {
     tags?: string[];
     image?: string;
     href?: string;
+    isHovered: boolean | null;
+    onHover: () => void;
+    onLeave: () => void;
 }
 
-export default function ProjectCard({ title, subtitle, description, tags, image, href }: Project) {
+export default function ProjectCard({ title, subtitle, description, tags, image, href, isHovered, onHover, onLeave }: Project) {
     const content = (
-        <div className="group relative px-8 py-6 font-cinzel
+        <motion.div 
+            onHoverStart={onHover}
+            onHoverEnd={onLeave}
+            animate={{
+                scale: isHovered === true ? 1.08 : isHovered === false ? 0.93 : 1,
+                opacity: isHovered === true ? 1 : isHovered === false ? 0.35 : 1,
+                zIndex: isHovered === true ? 10 : 1
+            }}
+            transition={{ duration: 0.2 }}
+            className="group relative px-8 py-6 font-cinzel
                         border border-white/10 hover:border-white/25
                         transition-all duration-500 cursor-pointer text-left h-full">
             {/* Corner accents */}
@@ -59,11 +72,15 @@ export default function ProjectCard({ title, subtitle, description, tags, image,
                     ))}
                 </div>
             )}
-        </div>
+        </motion.div>
     );
 
     return href ? (
-        <a href={href} target="_blank" rel="noopener noreferrer" className="block h-full">
+        <a style={{ zIndex: isHovered === true ? 10 : 1, position: 'relative' }}
+            href={href} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="block h-full">
             {content}
         </a>
     ) : (

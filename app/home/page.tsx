@@ -23,21 +23,42 @@ export default function Home() {
             subtitle: "Machine Learning",
             description: "A defensive password-strength checker using statistical patterns from leaked datasets. Combines entropy analysis, pattern detection, and ML models to estimate password predictability — without storing or cracking passwords.",
             tags: ["Python", "scikit-learn", "NLP", "Security", "ML"],
-            href: "https://github.com/Sleishm4n/PasswordStrengthChecker"
+            href: "https://github.com/Sleishm4n/PasswordStrengthChecker",
+            isHovered: null,
+            onHover: function (): void {
+                throw new Error('Function not implemented.');
+            },
+            onLeave: function (): void {
+                throw new Error('Function not implemented.');
+            }
         },
         {
             title: "Multi-Language Sudoku Solver",
             subtitle: "Algorithms & Languages",
             description: "A comprehensive exploration of Sudoku solving across Python, Rust, C++ and Java. Covers backtracking, constraint solving, and stochastic algorithms across 9×9 and 16×16 grids.",
             tags: ["Python", "Rust", "C++", "Java", "Backtracking", "CSP"],
-            href: "https://github.com/Sleishm4n/Sudokus"
+            href: "https://github.com/Sleishm4n/Sudokus",
+            isHovered: null,
+            onHover: function (): void {
+                throw new Error('Function not implemented.');
+            },
+            onLeave: function (): void {
+                throw new Error('Function not implemented.');
+            }
         },
         {
             title: "Git Auto-Commit",
             subtitle: "Developer Tooling & ML",
             description: "A CLI tool that generates commit messages from git diffs — starting with heuristic rules, then upgraded to a local LLM for semantic understanding.",
             tags: ["Python", "LLM", "CLI", "NLP", "Git"],
-            href: "https://github.com/Sleishm4n/auto-git-commit"
+            href: "https://github.com/Sleishm4n/auto-git-commit",
+            isHovered: null,
+            onHover: function (): void {
+                throw new Error('Function not implemented.');
+            },
+            onLeave: function (): void {
+                throw new Error('Function not implemented.');
+            }
         },
     ];
 
@@ -155,7 +176,7 @@ export default function Home() {
             {/* About */}
             <section id="about" className="min-h-screen flex flex-col items-center justify-center px-10 py-20">
                 <h2 className="font-cinzel text-sm tracking-[0.2em] uppercase text-white/40 mb-6">About</h2>
-                <div className="w-14 h-px bg-linear-to-r from-purple-400 to-transparent mb-2" />
+                <div className="w-14 h-px bg-linear-to-r from-purple-400 to-transparent mb-7" />
                 <div className="w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
                     <div className="flex flex-col gap-5 text-center">
                         <p className="font-cinzel text-white/60 text-sm leading-loose font-light tracking-wide">
@@ -196,10 +217,12 @@ export default function Home() {
             {/* Projects */}
             <section id="projects" className="min-h-screen flex flex-col items-center justify-center px-10 py-20">
                 <h2 className="font-cinzel text-sm tracking-[0.2em] uppercase text-white/40 mb-6">Projects</h2>
-                <div className="w-14 h-px bg-linear-to-r from-purple-400 to-transparent mb-2" />
+                <div className="w-14 h-px bg-linear-to-r from-purple-400 to-transparent mb-7" />
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 w-full">
-                    {PROJECTS.map((project) => (
-                        <ProjectCard key={project.title} {...project} />
+                    {PROJECTS.map((project, i) => (
+                        <ProjectCard key={project.title} {...project} isHovered={activeIndex === null ? null : activeIndex === i ? true : false}
+                        onHover={() => setHoveredIndex(i)}
+                        onLeave={() => setHoveredIndex(null)}/>
                     ))}
                 </div>
             </section>
@@ -207,7 +230,7 @@ export default function Home() {
             {/* Skills */}
             <section id="skills" className="min-h-screen flex flex-col items-center justify-center px-10 py-20">
                 <h2 className="font-cinzel text-sm tracking-[0.2em] uppercase text-white/40 mb-6">Skills</h2>
-                <div className="w-14 h-px bg-linear-to-r from-purple-400 to-transparent mb-2" />
+                <div className="w-14 h-px bg-linear-to-r from-purple-400 to-transparent mb-7" />
                 {/* <AnimatedSkills /> */}
                 <SkillsGrid skills={SKILLS} />
             </section>
@@ -215,7 +238,7 @@ export default function Home() {
             {/* Contact */}
             <section id="contact" className="min-h-screen flex flex-col items-center justify-center px-10 py-20">
                 <h2 className="font-cinzel text-sm tracking-[0.2em] uppercase text-white/40 mb-6">Contact</h2>
-                <div className="w-14 h-px bg-linear-to-r from-purple-400 to-transparent mb-2" />
+                <div className="w-14 h-px bg-linear-to-r from-purple-400 to-transparent mb-7" />
                 <p className="font-cinzel text-xs sm:text-sm tracking-[0.2em] uppercase text-white/70 mb-6">
                     Feel free to reach out to me through email or Linkedin, or just checkout my github
                 </p>
