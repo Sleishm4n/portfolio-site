@@ -24,13 +24,8 @@ export default function Home() {
             description: "A defensive password-strength checker using statistical patterns from leaked datasets. Combines entropy analysis, pattern detection, and ML models to estimate password predictability — without storing or cracking passwords.",
             tags: ["Python", "scikit-learn", "NLP", "Security", "ML"],
             href: "https://github.com/Sleishm4n/PasswordStrengthChecker",
-            isHovered: null,
-            onHover: function (): void {
-                throw new Error('Function not implemented.');
-            },
-            onLeave: function (): void {
-                throw new Error('Function not implemented.');
-            }
+            status: 'Ongoing',
+            date: 'Jan 26'
         },
         {
             title: "Multi-Language Sudoku Solver",
@@ -38,13 +33,8 @@ export default function Home() {
             description: "A comprehensive exploration of Sudoku solving across Python, Rust, C++ and Java. Covers backtracking, constraint solving, and stochastic algorithms across 9×9 and 16×16 grids.",
             tags: ["Python", "Rust", "C++", "Java", "Backtracking", "CSP"],
             href: "https://github.com/Sleishm4n/Sudokus",
-            isHovered: null,
-            onHover: function (): void {
-                throw new Error('Function not implemented.');
-            },
-            onLeave: function (): void {
-                throw new Error('Function not implemented.');
-            }
+            status: 'Ongoing',
+            date: 'Oct 25'
         },
         {
             title: "Git Auto-Commit",
@@ -52,92 +42,38 @@ export default function Home() {
             description: "A CLI tool that generates commit messages from git diffs — starting with heuristic rules, then upgraded to a local LLM for semantic understanding.",
             tags: ["Python", "LLM", "CLI", "NLP", "Git"],
             href: "https://github.com/Sleishm4n/auto-git-commit",
-            isHovered: null,
-            onHover: function (): void {
-                throw new Error('Function not implemented.');
-            },
-            onLeave: function (): void {
-                throw new Error('Function not implemented.');
-            }
+            status: 'Complete',
+            date: 'Feb 26'
         },
     ];
 
     const ABOUTS: AboutCardProps[] = [
         {
             label: "Currently", value: "BSc Computing Science", sub: "University of Glasgow | 3rd Year",
-            isHovered: null,
-            onHover: function (): void {
-                throw new Error('Function not implemented.');
-            },
-            onLeave: function (): void {
-                throw new Error('Function not implemented.');
-            }
         },
         {
             label: "This Summer", value: "Ciena", sub: "Returning Intern",
-            isHovered: null,
-            onHover: function (): void {
-                throw new Error('Function not implemented.');
-            },
-            onLeave: function (): void {
-                throw new Error('Function not implemented.');
-            }
         },
         {
             label: "Computing Interests", value: "Machine Learning | Algorithms | Networks",
             sub: '',
-            isHovered: null,
-            onHover: function (): void {
-                throw new Error('Function not implemented.');
-            },
-            onLeave: function (): void {
-                throw new Error('Function not implemented.');
-            }
         },
         {
             label: "Favourite Problems", value: "Algorithmic Challenges",
             sub: '',
-            isHovered: null,
-            onHover: function (): void {
-                throw new Error('Function not implemented.');
-            },
-            onLeave: function (): void {
-                throw new Error('Function not implemented.');
-            }
         },
 
         {
             label: "Beyond the screen", value: "Gym | Scout Leader | Cooking/Baking",
             sub: '',
-            isHovered: null,
-            onHover: function (): void {
-                throw new Error('Function not implemented.');
-            },
-            onLeave: function (): void {
-                throw new Error('Function not implemented.');
-            }
         },
         {
             label: "Favourite Superhero", value: "SpiderMan",
             sub: '“With great power comes great responsibility',
-            isHovered: null,
-            onHover: function (): void {
-                throw new Error('Function not implemented.');
-            },
-            onLeave: function (): void {
-                throw new Error('Function not implemented.');
-            }
         },
         {
             label: "Currently reading", value: "Children of Dune",
             sub: '“Most deadly errors arise from obsolete assumptions.”',
-            isHovered: null,
-            onHover: function (): void {
-                throw new Error('Function not implemented.');
-            },
-            onLeave: function (): void {
-                throw new Error('Function not implemented.');
-            }
         },        
     ];
 

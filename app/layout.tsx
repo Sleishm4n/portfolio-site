@@ -29,7 +29,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Navbar />
-        <main className="max-w-3xl mx-auto p-6">{children}</main>
+        <main className="max-w-4xl mx-auto p-6">{children}</main>
 
         <footer className="text-center py-6 text-sm text-gray-500">
           © {new Date().getFullYear()} Sam Leishman. All rights reserved.

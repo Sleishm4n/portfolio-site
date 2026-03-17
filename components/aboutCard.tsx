@@ -7,9 +7,9 @@ export interface AboutCardProps {
     label: string;
     value: string;
     sub: string;
-    isHovered: boolean | null;
-    onHover: () => void;
-    onLeave: () => void;
+    isHovered?: boolean | null;
+    onHover?: () => void;
+    onLeave?: () => void;
 }
 
 export default function AboutCard({ label, value, sub, isHovered, onHover, onLeave, }: AboutCardProps) {
