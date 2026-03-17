@@ -57,7 +57,7 @@ export const SKILLS: Skill[] = [
     },
     {
         name: "Git",
-        level: "Experienced",
+        level: "Comfortable",
         duration: "4 years",
         description:
             `My daily driver across all personal and team projects. Comfortable with branching strategies, rebasing, 
