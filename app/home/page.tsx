@@ -109,6 +109,8 @@ export default function Home() {
                 </div>
             </section>
 
+            <div className="w-full h-px bg-linear-to-r from-transparent via-purple-700 to-transparent my-16" />
+
             {/* About */}
             <section id="about" className="min-h-screen flex flex-col items-center justify-center px-10 py-20">
                 <h2 className="font-cinzel text-sm tracking-[0.2em] uppercase text-white/40 mb-6">About</h2>
@@ -150,6 +152,8 @@ export default function Home() {
                 </div>
             </section>
 
+            <div className="w-full h-px bg-linear-to-r from-transparent via-purple-700 to-transparent my-16" />
+
             {/* Projects */}
             <section id="projects" className="min-h-screen flex flex-col items-center justify-center px-10 py-20">
                 <h2 className="font-cinzel text-sm tracking-[0.2em] uppercase text-white/40 mb-6">Projects</h2>
@@ -163,6 +167,8 @@ export default function Home() {
                 </div>
             </section>
 
+            <div className="w-full h-px bg-linear-to-r from-transparent via-purple-700 to-transparent my-16" />
+
             {/* Skills */}
             <section id="skills" className="min-h-screen flex flex-col items-center justify-center px-10 py-20">
                 <h2 className="font-cinzel text-sm tracking-[0.2em] uppercase text-white/40 mb-6">Skills</h2>
@@ -171,12 +177,14 @@ export default function Home() {
                 <SkillsGrid skills={SKILLS} />
             </section>
 
+            <div className="w-full h-px bg-linear-to-r from-transparent via-purple-700 to-transparent my-16" />
+
             {/* Contact */}
             <section id="contact" className="min-h-screen flex flex-col items-center justify-center px-10 py-20">
                 <h2 className="font-cinzel text-sm tracking-[0.2em] uppercase text-white/40 mb-6">Contact</h2>
                 <div className="w-14 h-px bg-linear-to-r from-purple-400 to-transparent mb-7" />
                 <p className="font-cinzel text-xs sm:text-sm tracking-[0.2em] uppercase text-white/70 mb-6">
-                    Feel free to reach out to me through email or Linkedin, or just checkout my github
+                    Feel free to reach out to me through email or Linkedin, or just check out my github
                 </p>
                 <div className="items-center justify-center grid grid-cols-3 gap-6 w-full">
                     <a           
@@ -206,7 +214,6 @@ export default function Home() {
                     </a>
                 </div>
             </section>
-
         </main>
     );
 }
