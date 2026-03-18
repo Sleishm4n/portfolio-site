@@ -1,10 +1,11 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import NavButton from "./navButton";
 
 const NAV_ITEMS = [
   { text: "About", href: "/#about" },
+  { text: "Experience", href: "/#experience"},
   { text: "Projects", href: "/#projects" },
   { text: "Skills", href: "/#skills" },
   { text: "Contact", href: "/#contact" },
@@ -13,10 +14,22 @@ const NAV_ITEMS = [
 export default function Navbar() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [visible, setVisible] = useState(true);
+  const [lastY, setLastY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentY = window.scrollY
+      setVisible(currentY < lastY || currentY < 10)
+      setLastY(currentY)
+    }
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [lastY])
 
   return (
     <nav
-      className="sticky top-0 left-0 right-0 z-50 px-6 py-5 md:px-10 md:py-6"
+      className={`sticky top-0 left-0 right-0 z-50 px-6 py-5 md:px-10 md:py-6 transition-transform duration-1000 ${visible ? 'translate-y-0' : '-translate-y-full'}`}      
       role="navigation"
       aria-label="Main navigation"
     >
