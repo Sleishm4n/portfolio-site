@@ -10,6 +10,7 @@ import AboutCard, { AboutCardProps } from '@/components/aboutCard';
 import { SKILLS } from '@/lib/skills-data'
 import SkillsGrid from '@/components/skillsGrid';
 import Link from 'next/link';
+import ExperienceTree from '@/components/experienceTree';
 
 export default function Home() {
     const [shuffle, setShuffle] = useState<() => void>(() => () => {});
@@ -153,6 +154,14 @@ export default function Home() {
                 </div>
             </section>
 
+            <div className="w-full h-px bg-linear-to-r from-transparent via-purple-700 to-transparent my-16" />
+
+            {/* Experience */}
+            <section id='experience' className='min-h-screen w-full flex flex-col items-center justify-center px-10 py-20'>
+                <h2 className="font-cinzel text-sm tracking-[0.2em] uppercase text-white/40 mb-6">Experience</h2>
+                <div className="w-14 h-px bg-linear-to-r from-purple-400 to-transparent mb-7" />
+                <ExperienceTree />
+            </section>
             <div className="w-full h-px bg-linear-to-r from-transparent via-purple-700 to-transparent my-16" />
 
             {/* Projects */}

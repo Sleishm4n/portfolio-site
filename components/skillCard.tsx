@@ -58,11 +58,11 @@ const SkillCard = forwardRef<HTMLDivElement, SkillCardProps>(
                         {skill.name}
                     </p>
 
-                    <div className="flex items-end gap-[3px] shrink-0">
+                    <div className="flex items-end gap-0.75 shrink-0">
                         {[1, 2, 3].map((level) => (
                             <div
                                 key={level}
-                                className={`w-[3px] rounded-full transition-all duration-500 ${
+                                className={`w-0.75 rounded-full transition-all duration-500 ${
                                     level <= bars
                                         ? "bg-purple-500/80 group-hover:bg-purple-400"
                                         : "bg-white/10"
