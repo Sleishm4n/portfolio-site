@@ -9,6 +9,7 @@ import NowPlaying from '@/components/nowPlaying';
 import AboutCard, { AboutCardProps } from '@/components/aboutCard';
 import { SKILLS } from '@/lib/skills-data'
 import SkillsGrid from '@/components/skillsGrid';
+import Link from 'next/link';
 
 export default function Home() {
     const [shuffle, setShuffle] = useState<() => void>(() => () => {});
@@ -158,16 +159,19 @@ export default function Home() {
             <section id="projects" className="min-h-screen flex flex-col items-center justify-center px-10 py-20">
                 <h2 className="font-cinzel text-sm tracking-[0.2em] uppercase text-white/40 mb-6">Projects</h2>
                 <div className="w-14 h-px bg-linear-to-r from-purple-400 to-transparent mb-7" />
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 w-full">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 w-full mb-5">
                     {PROJECTS.map((project, i) => (
                         <ProjectCard key={project.title} {...project} isHovered={activeIndex === null ? null : activeIndex === i ? true : false}
                         onHover={() => setHoveredIndex(i)}
                         onLeave={() => setHoveredIndex(null)}/>
                     ))}
                 </div>
+
+                <Link className='font-cinzel text-xl mt-2 text-white/40 hover:text-purple-400/80' href={'/projects'}> View all →</Link>
+                <div className="w-25 h-px bg-linear-to-r from-purple-400 to-transparent mb-7" />
             </section>
 
-            <div className="w-full h-px bg-linear-to-r from-transparent via-purple-700 to-transparent my-16" />
+            <div className="w-full h-px bg-linear-to-r from-transparent via-purple-700 to-transparent my-10" />
 
             {/* Skills */}
             <section id="skills" className="min-h-screen flex flex-col items-center justify-center px-10 py-20">

@@ -10,6 +10,9 @@ export interface Project {
     tags?: string[];
     image?: string;
     href?: string;
+    learned?: string
+    challenges?: string
+    liveHref?: string
     isHovered?: boolean | null;
     onHover?: () => void; 
     onLeave?: () => void;
@@ -17,8 +20,7 @@ export interface Project {
 
 
 
-export default function ProjectCard({ title, subtitle, description, status, date, tags, image, href, isHovered, onHover, onLeave }: Project) {
-    const statusStyles: Record<string, string> = {
+export default function ProjectCard({ title, subtitle, description, status, date, tags, image, href, learned, challenges, liveHref, isHovered, onHover, onLeave }: Project) {    const statusStyles: Record<string, string> = {
         'Ongoing':   'bg-green-500/15 text-green-400 border border-green-500/30',
         'Complete':  'bg-blue-500/15 text-blue-400 border border-blue-500/30',
         'Exploring': 'bg-amber-500/15 text-amber-400 border border-amber-500/30',
@@ -36,9 +38,9 @@ export default function ProjectCard({ title, subtitle, description, status, date
                 zIndex: isHovered === true ? 10 : 1
             }}
             transition={{ duration: 0.2 }}
-            className="group relative px-8 pt-12 pb-6 font-cinzel
+            className="group relative px-8 pt-12 pb-6 mb-6 font-cinzel
                         border border-white/10 hover:border-purple-500/40
-                        transition-all duration-500 cursor-pointer text-left h-full flex flex-col"
+                        transition-all duration-500 cursor-pointer text-left h-full flex flex-col break-inside-avoid"
         >
             {/* Corner accents */}
             <span className="absolute top-0 left-0 w-4 h-px bg-purple-500/60" aria-hidden="true" />
@@ -82,6 +84,24 @@ export default function ProjectCard({ title, subtitle, description, status, date
                           group-hover:text-white/60 transition-colors duration-500 mb-4">
                 {description}
             </p>
+
+            {(learned || challenges) && (
+                <div className="border-t border-purple-500/10 pt-4 mb-4 flex flex-col gap-3">
+                    {learned && (
+                        <div>
+                            <p className="text-[9px] tracking-[0.2em] uppercase text-purple-400/50 mb-1 font-space">What I learned</p>
+                            <p className="text-white/35 text-[13px] leading-relaxed font-space group-hover:text-white/50 transition-colors duration-500">{learned}</p>
+                        </div>
+                    )}
+                    {challenges && (
+                        <div>
+                            <p className="text-[9px] tracking-[0.2em] uppercase text-purple-400/50 mb-1 font-space">Challenges</p>
+                            <p className="text-white/35 text-[13px] leading-relaxed font-space group-hover:text-white/50 transition-colors duration-500">{challenges}</p>
+                        </div>
+                    )}
+                </div>
+            )}
+            
             <div className='mt-auto'>
             {tags && tags.length > 0 && (
                 <div className="flex flex-wrap gap-2 mt-auto">
@@ -104,10 +124,17 @@ export default function ProjectCard({ title, subtitle, description, status, date
                             GitHub ↗
                         </a>
                     )}
+                    {liveHref && (
+                        <a href={liveHref} target="_blank" rel="noopener noreferrer"
+                        className="text-xs font-sans tracking-wider text-purple-400/70 border border-purple-500/30 px-3 py-1.5 bg-purple-500/10
+                                    hover:text-purple-300 hover:border-purple-500/60 transition-all duration-300">
+                            Live Demo ↗
+                        </a>
+                    )}
                 </div>
             </div>
         </motion.div>
-    );
+    );  
 
     return content
 }

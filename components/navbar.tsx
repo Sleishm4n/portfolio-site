@@ -4,10 +4,10 @@ import { usePathname } from "next/navigation";
 import NavButton from "./navButton";
 
 const NAV_ITEMS = [
-  { text: "About", href: "#about" },
-  { text: "Projects", href: "#projects" },
-  { text: "Skills", href: "#skills" },
-  { text: "Contact", href: "#contact" },
+  { text: "About", href: "/#about" },
+  { text: "Projects", href: "/#projects" },
+  { text: "Skills", href: "/#skills" },
+  { text: "Contact", href: "/#contact" },
 ] as const;
 
 export default function Navbar() {
@@ -22,7 +22,7 @@ export default function Navbar() {
     >
       <div className="flex items-center justify-between">
         <a
-          href="#"
+          href="/"
           className="font-cinzel text-white/60 text-sm tracking-[0.2em] uppercase
                      hover:text-white transition-colors duration-500"
           aria-label="Home - Sam Leishman"
