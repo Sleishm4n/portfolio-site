@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import TerminalPreview, { Line } from '@/components/teminalPreview';
 
 export interface Project {
     title: string;
@@ -13,6 +14,7 @@ export interface Project {
     learned?: string
     challenges?: string
     liveHref?: string
+    terminal?: Line[]
     isHovered?: boolean | null;
     onHover?: () => void; 
     onLeave?: () => void;
@@ -20,7 +22,7 @@ export interface Project {
 
 
 
-export default function ProjectCard({ title, subtitle, description, status, date, tags, image, href, learned, challenges, liveHref, isHovered, onHover, onLeave }: Project) {    const statusStyles: Record<string, string> = {
+export default function ProjectCard({ title, subtitle, description, status, date, tags, image, href, learned, challenges, liveHref, terminal, isHovered, onHover, onLeave }: Project) {    const statusStyles: Record<string, string> = {
         'Ongoing':   'bg-green-500/15 text-green-400 border border-green-500/30',
         'Complete':  'bg-blue-500/15 text-blue-400 border border-blue-500/30',
         'Exploring': 'bg-amber-500/15 text-amber-400 border border-amber-500/30',
@@ -56,6 +58,9 @@ export default function ProjectCard({ title, subtitle, description, status, date
                                group-hover:opacity-80 transition-opacity duration-500"
                 />
             )}
+
+            {terminal && <TerminalPreview lines={terminal} />}
+
             <div className={`px-2 py-0.5 text-[10px] tracking-widest uppercase font-space rounded-sm absolute top-3 right-3 ${statusClass}`}>
                 {status}
             </div>
@@ -79,6 +84,8 @@ export default function ProjectCard({ title, subtitle, description, status, date
                                group-hover:text-purple-400 transition-colors duration-500 mb-1'>
                 {date}
             </p>
+
+            
 
             <p className="text-white/40 text-[14px] leading-relaxed tracking-wide font-space
                           group-hover:text-white/60 transition-colors duration-500 mb-4">
