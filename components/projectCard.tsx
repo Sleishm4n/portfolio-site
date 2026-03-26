@@ -52,7 +52,7 @@ export default function ProjectCard({ title, subtitle, description, status, date
                 <img
                     src={image}
                     alt={title}
-                    className="w-full h-40 object-cover mb-4 opacity-60 
+                    className="w-full h-48 object-contain opacity-60 mb-4
                                group-hover:opacity-80 transition-opacity duration-500"
                 />
             )}
