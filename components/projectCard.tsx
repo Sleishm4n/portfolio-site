@@ -87,7 +87,7 @@ export default function ProjectCard({ title, subtitle, description, status, date
 
             
 
-            <p className="text-white/40 text-[14px] leading-relaxed tracking-wide font-space
+            <p className="text-white/40 text-[14px] leading-relaxed tracking-wide font-ibmPlex
                           group-hover:text-white/60 transition-colors duration-500 mb-4">
                 {description}
             </p>
@@ -97,13 +97,13 @@ export default function ProjectCard({ title, subtitle, description, status, date
                     {learned && (
                         <div>
                             <p className="text-[9px] tracking-[0.2em] uppercase text-thistle-400/50 mb-1 font-space">What I learned</p>
-                            <p className="text-white/35 text-[13px] leading-relaxed font-space group-hover:text-white/50 transition-colors duration-500">{learned}</p>
+                            <p className="text-white/35 text-[13px] leading-relaxed font-imbPlex group-hover:text-white/50 transition-colors duration-500">{learned}</p>
                         </div>
                     )}
                     {challenges && (
                         <div>
                             <p className="text-[9px] tracking-[0.2em] uppercase text-thistle-400/50 mb-1 font-space">Challenges</p>
-                            <p className="text-white/35 text-[13px] leading-relaxed font-space group-hover:text-white/50 transition-colors duration-500">{challenges}</p>
+                            <p className="text-white/35 text-[13px] leading-relaxed font-ibmPlex group-hover:text-white/50 transition-colors duration-500">{challenges}</p>
                         </div>
                     )}
                 </div>

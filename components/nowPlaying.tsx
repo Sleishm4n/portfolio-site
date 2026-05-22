@@ -28,14 +28,14 @@ export default function NowPlaying() {
 
     if (!song.isPlaying) {
         return (
-            <div className="group relative flex items-center px-4 py-3 font-cinzel
+            <div className="group relative flex items-center px-4 py-3 font-ibmPlex
                 border border-white/10 hover:border-white/25
                 transition-colors duration-500 cursor-default text-left h-full">
                 <span className="absolute top-0 left-0 w-2 h-px bg-thistle-500/60" aria-hidden="true" />
                 <span className="absolute top-0 left-0 w-px h-2 bg-thistle-500/60" aria-hidden="true" />
                 <span className="absolute bottom-0 right-0 w-2 h-px bg-thistle-500/60" aria-hidden="true" />
                 <span className="absolute bottom-0 right-0 w-px h-2 bg-thistle-500/60" aria-hidden="true" />
-                <span className="font-cinzel text-xs tracking-widest text-white/30">Sam's not listening to anything right now</span>
+                <span className="font-ibmPlex text-xs tracking-widest text-white/30">Sam's not listening to anything right now</span>
             </div>
         );
     }
@@ -45,7 +45,7 @@ export default function NowPlaying() {
             href={song.songUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative flex items-center gap-3 px-4 py-3 font-cinzel
+            className="group relative flex items-center gap-3 px-4 py-3 font-ibmPlex
                 border border-white/10 hover:border-white/25
                 transition-colors duration-500 cursor-pointer text-left h-full"
         >
@@ -63,10 +63,10 @@ export default function NowPlaying() {
                 />
             )}
             <div className="flex flex-col mx-auto">
-                <span className="font-cinzel text-xs tracking-widest text-white/70 group-hover:text-white transition-colors ">
+                <span className="font-ibmPlex text-xs tracking-widest text-white/70 group-hover:text-white transition-colors ">
                     {song.title}
                 </span>
-                <span className="font-cinzel text-xs tracking-widest text-white/30">
+                <span className="font-ibmPlex text-xs tracking-widest text-white/30">
                     {song.artist}
                 </span>
             </div>

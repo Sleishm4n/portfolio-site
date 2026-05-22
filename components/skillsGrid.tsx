@@ -66,7 +66,7 @@ export default function SkillsGrid({ skills }: SkillsGridProps) {
                 >
                     <button
                         onClick={() => setSelectedIndex(null)}
-                        className="absolute top-3 right-4 font-cinzel text-xs text-white/20 hover:text-white/60 transition-colors tracking-widest"
+                        className="absolute top-3 right-4 font-ibmPlex text-xs text-white/20 hover:text-white/60 transition-colors tracking-widest"
                     >
                         ✕
                     </button>
@@ -77,11 +77,11 @@ export default function SkillsGrid({ skills }: SkillsGridProps) {
 
                     <div className="w-full sm:w-3/5 sm:h-full flex flex-col justify-between border-b sm:border-b-0 sm:border-r border-white/5 pb-4 sm:pb-0 sm:pr-6">
                         <div>
-                            <h3 className="font-cinzel text-white/90 text-lg mb-2">{skills[selectedIndex].name}</h3>
+                            <h3 className="font-ibmPlex text-white/90 text-lg mb-2">{skills[selectedIndex].name}</h3>
                             <p className="font-sans text-xs text-white/30 leading-relaxed text-left">{skills[selectedIndex].description}</p>
                         </div>
                         <div>
-                            <p className="font-cinzel text-xs tracking-[0.25em] uppercase text-thistle-400/70 mb-1">{skills[selectedIndex].level}</p>
+                            <p className="font-space text-xs tracking-[0.25em] uppercase text-thistle-400/70 mb-1">{skills[selectedIndex].level}</p>
                             <p className="font-sans text-xs text-white/30">{skills[selectedIndex].duration}</p>
                         </div>
                     </div>
@@ -89,7 +89,7 @@ export default function SkillsGrid({ skills }: SkillsGridProps) {
                     <div className="flex-1 sm:pl-6 flex flex-col gap-4 pt-4 sm:pt-0">
                         {skills[selectedIndex].projects && (
                             <div className="mt-auto">
-                            <p className="font-cinzel text-xs tracking-[0.25em] uppercase text-thistle-400/70 mb-3">Projects</p>
+                            <p className="font-space text-xs tracking-[0.25em] uppercase text-thistle-400/70 mb-3">Projects</p>
                             <div className="flex flex-wrap gap-2">
                                 {skills[selectedIndex].projects!.map((p) => (
                                     <a key={p.label} href={p.href} target="_blank" rel="noopener noreferrer"

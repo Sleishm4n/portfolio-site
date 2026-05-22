@@ -22,7 +22,7 @@ export default function AboutCard({ label, value, sub, isHovered, onHover, onLea
                 opacity: isHovered === true ? 1 : isHovered === false ? 0.35 : 1,
             }}
             transition={{ duration: 0.2 }}
-            className="group relative px-4 py-3 font-cinzel
+            className="group relative px-4 py-3 font-ibmPlex
                         border border-white/10 hover:border-white/25
                         transition-colors duration-500 cursor-default text-left h-full items-center"
         >

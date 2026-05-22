@@ -65,7 +65,6 @@ export default function Home() {
             label: "Favourite Problems", value: "Algorithmic Challenges",
             sub: '',
         },
-
         {
             label: "Beyond the screen", value: "Gym | Scout Leader | Cooking/Baking",
             sub: '',
@@ -98,7 +97,7 @@ export default function Home() {
                 </div>
                 <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">  
                     <AnimatedLetters text="Sam Leishman" onShuffleReady={(fn) => setShuffle(() => fn)} />
-                    <p className="font-cinzel text-sm md:text-lg text-gray-400">
+                    <p className="font-dm uppercase text-sm md:text-lg text-gray-400">
                         Computing Science Student : University of Glasgow
                     </p>
                     <div className="flex justify-center mb-2.5">
@@ -116,25 +115,25 @@ export default function Home() {
 
             {/* About */}
             <section id="about" className="min-h-screen flex flex-col items-center justify-center px-10 py-20">
-                <h2 className="font-cinzel text-sm tracking-[0.2em] uppercase text-white/40 mb-6">About</h2>
+                <h2 className="font-dm text-sm tracking-[0.2em] uppercase text-white/40 mb-6">// About</h2>
                 <div className="w-14 h-px bg-linear-to-r from-thistle-400 to-transparent mb-7" />
                 <div className="w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
                     <div className="flex flex-col gap-5 text-center">
-                        <p className="font-cinzel text-white/60 text-sm leading-loose font-light tracking-wide">
+                        <p className="font-ibmPlex text-white/60 text-sm leading-loose font-light tracking-wide">
                             Hi I'm Sam a third year comp-sci student at the University of Glasgow. My university projects 
                             have helped me grow as a software engineer in different areas including machine learning, 
                             algorithms and networking. I love solving problems and building things that tie in my personal
                              interests and my academic coursework.
                         </p>
-                        <p className="font-cinzel text-white/60 text-sm leading-loose font-light tracking-wide">
+                        <p className="font-ibmPlex text-white/60 text-sm leading-loose font-light tracking-wide">
                             When I'm not at university I spend most of my time on personal projects. My favourite to date is 
                             the from scratch neural network in Rust which highlights my skills in machine learning. I've always enjoyed 
                             maths and physics and seeing how they shape my approach to problems.
                         </p>
-                        <p className="font-cinzel text-white/60 text-sm leading-loose font-light tracking-wide">
+                        <p className="font-ibmPlex text-white/60 text-sm leading-loose font-light tracking-wide">
                             When I'm not coding, you'll find me playing video games or consuming some work of science fiction. 
                         </p>
-                        <p className="font-cinzel text-white/60 text-sm leading-loose font-light tracking-wide">
+                        <p className="font-ibmPlex text-white/60 text-sm leading-loose font-light tracking-wide">
                             I'm a dedicated student who's always willing to learn more about what interests me
                         </p>
                     </div>
@@ -158,7 +157,7 @@ export default function Home() {
 
             {/* Experience */}
             <section id='experience' className='min-h-screen w-full flex flex-col items-center justify-center px-10 py-20'>
-                <h2 className="font-cinzel text-sm tracking-[0.2em] uppercase text-white/40 mb-6">Experience</h2>
+                <h2 className="font-dm text-sm tracking-[0.2em] uppercase text-white/40 mb-6">// Experience</h2>
                 <div className="w-14 h-px bg-linear-to-r from-thistle-400 to-transparent mb-7" />
                 <ExperienceTree />
             </section>
@@ -166,7 +165,7 @@ export default function Home() {
 
             {/* Projects */}
             <section id="projects" className="min-h-screen flex flex-col items-center justify-center px-10 py-20">
-                <h2 className="font-cinzel text-sm tracking-[0.2em] uppercase text-white/40 mb-6">Projects</h2>
+                <h2 className="font-dm text-sm tracking-[0.2em] uppercase text-white/40 mb-6">// Projects</h2>
                 <div className="w-14 h-px bg-linear-to-r from-thistle-400 to-transparent mb-7" />
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 w-full mb-5">
                     {PROJECTS.map((project, i) => (
@@ -176,7 +175,7 @@ export default function Home() {
                     ))}
                 </div>
 
-                <Link className='font-cinzel text-xl mt-2 text-white/40 hover:text-thistle-400/80' href={'/projects'}> View all →</Link>
+                <Link className='font-dm text-xl mt-2 text-white/40 hover:text-thistle-400/80' href={'/projects'}> View all →</Link>
                 <div className="w-25 h-px bg-linear-to-r from-thistle-400 to-transparent mb-7" />
             </section>
 
@@ -184,7 +183,7 @@ export default function Home() {
 
             {/* Skills */}
             <section id="skills" className="min-h-screen flex flex-col items-center justify-center px-10 py-20">
-                <h2 className="font-cinzel text-sm tracking-[0.2em] uppercase text-white/40 mb-6">Skills</h2>
+                <h2 className="font-dm text-sm tracking-[0.2em] uppercase text-white/40 mb-6">// Skills</h2>
                 <div className="w-14 h-px bg-linear-to-r from-thistle-400 to-transparent mb-7" />
                 {/* <AnimatedSkills /> */}
                 <SkillsGrid skills={SKILLS} />
@@ -194,9 +193,9 @@ export default function Home() {
 
             {/* Contact */}
             <section id="contact" className="min-h-screen flex flex-col items-center justify-center px-10 py-20">
-                <h2 className="font-cinzel text-sm tracking-[0.2em] uppercase text-white/40 mb-6">Contact</h2>
+                <h2 className="font-dm text-sm tracking-[0.2em] uppercase text-white/40 mb-6">// Contact</h2>
                 <div className="w-14 h-px bg-linear-to-r from-thistle-400 to-transparent mb-7" />
-                <p className="font-cinzel text-xs sm:text-sm tracking-[0.2em] uppercase text-white/70 mb-6">
+                <p className="font-ibmPlex text-xs sm:text-sm tracking-[0.2em] uppercase text-white/70 mb-6">
                     Feel free to reach out to me through email or Linkedin, or check out my github
                 </p>
                 <div className="items-center justify-center grid grid-cols-3 gap-6 w-full">
@@ -207,14 +206,14 @@ export default function Home() {
                         className="flex flex-col items-center gap-2 group"
                     >
                         <Github size={32} color="#824F82" className="group-hover:opacity-70 transition-opacity" />
-                        <span className="font-cinzel text-xs tracking-widest text-white/40 group-hover:text-white/70 transition-colors">GitHub</span>
+                        <span className="font-space text-xs tracking-widest text-white/40 group-hover:text-white/80 transition-colors">GitHub</span>
                     </a>
                     <a
                         href="mailto:sam.g.leishman@gmail.com"
                         className="flex flex-col items-center gap-2 group"
                     >
                         <Mail size={32} color="#824F82" className="group-hover:opacity-70 transition-opacity" />
-                        <span className="font-cinzel text-xs tracking-widest text-white/40 group-hover:text-white/70 transition-colors">Email</span>
+                        <span className="font-space text-xs tracking-widest text-white/40 group-hover:text-white/80 transition-colors">Email</span>
                     </a>
                     <a
                         href="https://www.linkedin.com/in/sam-leishman-0a174528b/"
@@ -223,7 +222,7 @@ export default function Home() {
                         className="flex flex-col items-center gap-2 group"
                     >
                         <Linkedin size={32} color="#824F82" className="group-hover:opacity-70 transition-opacity" />
-                        <span className="font-cinzel text-xs tracking-widest text-white/40 group-hover:text-white/70 transition-colors">LinkedIn</span>
+                        <span className="font-space text-xs tracking-widest text-white/40 group-hover:text-white/70 transition-colors">LinkedIn</span>
                     </a>
                 </div>
             </section>

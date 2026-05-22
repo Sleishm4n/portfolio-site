@@ -4,7 +4,7 @@ export default function ShuffleButton({ onClick }: { onClick: () => void }) {
     return (
         <button
             onClick={onClick}
-            className="group relative flex items-center px-3 py-1 font-cinzel
+            className="group relative flex items-center px-3 py-1 font-space
                 border border-white/10 hover:border-white/25
                 transition-colors duration-500 cursor-pointer text-left h-full"
         >
