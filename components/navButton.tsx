@@ -23,7 +23,7 @@ export default function NavButton({ text, href, isActive = false, onClick  }: Na
       {text}
       <span
         className={`
-          absolute -bottom-1 left-1/2 -translate-x-1/2 h-px bg-purple-600
+          absolute -bottom-1 left-1/2 -translate-x-1/2 h-px bg-thistle-600
           transition-all duration-500
           ${isActive ? "w-full opacity-60" : "w-0 opacity-0 group-hover:w-full group-hover:opacity-30"}
         `}

@@ -7,7 +7,7 @@ export default function TerminalPreview({ lines }: { lines: Line[] }) {
   const colours: Record<Line["type"], string> = {
     cmd:     "text-green-400/70",
     output:  "text-white/40",
-    label:   "text-purple-400/70",
+    label:   "text-thistle-400/70",
     prompt:  "text-yellow-400/60",
     success: "text-green-400/60",
   };

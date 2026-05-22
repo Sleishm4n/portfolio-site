@@ -28,7 +28,7 @@ export default function ProjectCard({ title, subtitle, description, status, date
         'Exploring': 'bg-amber-500/15 text-amber-400 border border-amber-500/30',
     }
 
-    const statusClass = statusStyles[status] ?? 'bg-purple-500/15 text-purple-400 border border-purple-500/30'
+    const statusClass = statusStyles[status] ?? 'bg-thistle-500/15 text-thistle-400 border border-thistle-500/30'
 
     const content = (
         <motion.div 
@@ -40,15 +40,15 @@ export default function ProjectCard({ title, subtitle, description, status, date
                 zIndex: isHovered === true ? 10 : 1
             }}
             transition={{ duration: 0.2 }}
-            className="group relative px-8 pt-12 pb-6 mb-6 font-cinzel
-                        border border-white/10 hover:border-purple-500/40
+            className="group relative px-8 pt-12 pb-6 mb-6 font-cinzel bg-cards/5 backdrop-blur-md
+                        border border-white/10 hover:border-thistle-500/40
                         transition-all duration-500 cursor-pointer text-left h-full flex flex-col break-inside-avoid"
         >
             {/* Corner accents */}
-            <span className="absolute top-0 left-0 w-4 h-px bg-purple-500/60" aria-hidden="true" />
-            <span className="absolute top-0 left-0 w-px h-4 bg-purple-500/60" aria-hidden="true" />
-            <span className="absolute bottom-0 right-0 w-4 h-px bg-purple-500/60" aria-hidden="true" />
-            <span className="absolute bottom-0 right-0 w-px h-4 bg-purple-500/60" aria-hidden="true" />
+            <span className="absolute top-0 left-0 w-4 h-px bg-thistle-500/60" aria-hidden="true" />
+            <span className="absolute top-0 left-0 w-px h-4 bg-thistle-500/60" aria-hidden="true" />
+            <span className="absolute bottom-0 right-0 w-4 h-px bg-thistle-500/60" aria-hidden="true" />
+            <span className="absolute bottom-0 right-0 w-px h-4 bg-thistle-500/60" aria-hidden="true" />
 
             {image && (
                 <img
@@ -65,12 +65,12 @@ export default function ProjectCard({ title, subtitle, description, status, date
                 {status}
             </div>
 
-            <div className="absolute inset-0 bg-linear-to-t from-purple-900/20 to-transparent 
+            <div className="absolute inset-0 bg-linear-to-t from-thistle-900/20 to-transparent 
                 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
             {subtitle && (
-                <p className="text-xs tracking-[0.2em] uppercase text-purple-400/60 font-cinzel
-                               group-hover:text-purple-400 transition-colors duration-500 mb-1">
+                <p className="text-xs tracking-[0.2em] uppercase text-thistle-400/60 font-cinzel
+                               group-hover:text-thistle-400 transition-colors duration-500 mb-1">
                     {subtitle}
                 </p>
             )}
@@ -80,8 +80,8 @@ export default function ProjectCard({ title, subtitle, description, status, date
                 {title}
             </p>
             
-            <p className='text-[10px] tracking-[0.2em] uppercase text-purple-400/80
-                               group-hover:text-purple-400 transition-colors duration-500 mb-1'>
+            <p className='text-[10px] tracking-[0.2em] uppercase text-thistle-400/80
+                               group-hover:text-thistle-400 transition-colors duration-500 mb-1'>
                 {date}
             </p>
 
@@ -93,16 +93,16 @@ export default function ProjectCard({ title, subtitle, description, status, date
             </p>
 
             {(learned || challenges) && (
-                <div className="border-t border-purple-500/10 pt-4 mb-4 flex flex-col gap-3">
+                <div className="border-t border-thistle-500/10 pt-4 mb-4 flex flex-col gap-3">
                     {learned && (
                         <div>
-                            <p className="text-[9px] tracking-[0.2em] uppercase text-purple-400/50 mb-1 font-space">What I learned</p>
+                            <p className="text-[9px] tracking-[0.2em] uppercase text-thistle-400/50 mb-1 font-space">What I learned</p>
                             <p className="text-white/35 text-[13px] leading-relaxed font-space group-hover:text-white/50 transition-colors duration-500">{learned}</p>
                         </div>
                     )}
                     {challenges && (
                         <div>
-                            <p className="text-[9px] tracking-[0.2em] uppercase text-purple-400/50 mb-1 font-space">Challenges</p>
+                            <p className="text-[9px] tracking-[0.2em] uppercase text-thistle-400/50 mb-1 font-space">Challenges</p>
                             <p className="text-white/35 text-[13px] leading-relaxed font-space group-hover:text-white/50 transition-colors duration-500">{challenges}</p>
                         </div>
                     )}
@@ -114,9 +114,9 @@ export default function ProjectCard({ title, subtitle, description, status, date
                 <div className="flex flex-wrap gap-2 mt-auto">
                     {tags.map((tag) => (
                         <span key={tag} 
-                              className="text-xs font-sans tracking-wider text-purple-400/50
-                                         border border-purple-500/20 px-2 py-0.5
-                                         group-hover:text-purple-400/70 group-hover:border-purple-500/40
+                              className="text-xs font-sans tracking-wider text-thistle-400/50
+                                         border border-thistle-500/20 px-2 py-0.5
+                                         group-hover:text-thistle-400/70 group-hover:border-thistle-500/40
                                          transition-all duration-500">
                             {tag}
                         </span>
@@ -133,8 +133,8 @@ export default function ProjectCard({ title, subtitle, description, status, date
                     )}
                     {liveHref && (
                         <a href={liveHref} target="_blank" rel="noopener noreferrer"
-                        className="text-xs font-sans tracking-wider text-purple-400/70 border border-purple-500/30 px-3 py-1.5 bg-purple-500/10
-                                    hover:text-purple-300 hover:border-purple-500/60 transition-all duration-300">
+                        className="text-xs font-sans tracking-wider text-thistle-400/70 border border-thistle-500/30 px-3 py-1.5 bg-thistle-500/10
+                                    hover:text-thistle-300 hover:border-thistle-500/60 transition-all duration-300">
                             Live Demo ↗
                         </a>
                     )}

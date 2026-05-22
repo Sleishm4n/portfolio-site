@@ -86,11 +86,11 @@ export const PROJECTS: Project[] = [
     subtitle: "Neural Network",
     description: `To better understand how neural networks work, I challenged myself to build a simple neural net from scratch in Rust, meaning no external libaries or crates. 
     This meant creating my own Matrix struct and implementing all the basic functions for simple lin alg to then build up to more complicated parts such as, activation and loss functions. 
-    This project is still in early development.`,
+    Having built, trained and tested the nn on XOR, I then chose to implement a more generic Tensor struct to apply on MNIST dataset.`,
     learned: `I'm learning a great deal of Rust as this is my first major project utilising it. I'm learning more in depth about the behind the scenes of common ML libraries by implementing it myself.`,
     challenges: `Working with systems/ Rust concepts such as borrowing has been challenging along with sytanx differences from other languages.`,
     tags: ["Rust", "Linear Algebra", "Machine Learning"],
-    status: "Exploring",
+    status: "Ongoing",
     date: "Mar 2026",
     href: "https://github.com/Sleishm4n/rust-ml"
   },
@@ -120,7 +120,7 @@ export const PROJECTS: Project[] = [
     tags: ["Python", "Django", "JavaScript", "CSS", "SQLite"],
     href: "https://github.com/Humhmu/CityStars",
     status: "Complete",
-    date: "Mar 2026",
+    date: "Mar 2025",
     image: "/cityStars.jpg",
   },
 ];

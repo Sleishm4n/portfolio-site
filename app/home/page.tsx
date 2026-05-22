@@ -23,16 +23,17 @@ export default function Home() {
         {
             title: "Password Strength Evaluator",
             subtitle: "Machine Learning",
-            description: "A defensive password-strength checker using statistical patterns from leaked datasets. Combines entropy analysis, pattern detection, and ML models to estimate password predictability — without storing or cracking passwords.",
+            description: "A defensive password-strength checker using statistical patterns from leaked datasets. Combines entropy analysis, pattern detection, and ML models to estimate password predictability - without storing or cracking passwords.",
             tags: ["Python", "scikit-learn", "NLP", "Security", "ML"],
             href: "https://github.com/Sleishm4n/PasswordStrengthChecker",
             status: 'Ongoing',
             date: 'Jan 26'
         },
         {
-            title: "Multi-Language Sudoku Solver",
-            subtitle: "Algorithms & Languages",
-            description: "A comprehensive exploration of Sudoku solving across Python, Rust, C++ and Java. Covers backtracking, constraint solving, and stochastic algorithms across 9×9 and 16×16 grids.",
+            title: "Marine Sensor Dashboard",
+            subtitle: "UofG Team Project - Systems & Data Visualisation",
+            description: `A cross-platform desktop app built for Malin Group to monitor and visualise live marine sensor data during heavy marine lifts.
+        Built with Electron and React, the app ingests real-time telemetry and presents it through an interactive dashboard designed for field operators.`,
             tags: ["Python", "Rust", "C++", "Java", "Backtracking", "CSP"],
             href: "https://github.com/Sleishm4n/Sudokus",
             status: 'Ongoing',
@@ -41,7 +42,7 @@ export default function Home() {
         {
             title: "Git Auto-Commit",
             subtitle: "Developer Tooling & ML",
-            description: "A CLI tool that generates commit messages from git diffs — starting with heuristic rules, then upgraded to a local LLM for semantic understanding.",
+            description: "A CLI tool that generates commit messages from git diffs - starting with heuristic rules, then upgraded to a local LLM for semantic understanding. Uses a local Ollama model (qwen2.5:3b) with parsed git diffs from current project.",
             tags: ["Python", "LLM", "CLI", "NLP", "Git"],
             href: "https://github.com/Sleishm4n/auto-git-commit",
             status: 'Complete',
@@ -111,12 +112,12 @@ export default function Home() {
                 </div>
             </section>
 
-            <div className="w-full h-px bg-linear-to-r from-transparent via-purple-700 to-transparent my-16" />
+            <div className="w-full h-px bg-linear-to-r from-transparent via-thistle-700 to-transparent my-16" />
 
             {/* About */}
             <section id="about" className="min-h-screen flex flex-col items-center justify-center px-10 py-20">
                 <h2 className="font-cinzel text-sm tracking-[0.2em] uppercase text-white/40 mb-6">About</h2>
-                <div className="w-14 h-px bg-linear-to-r from-purple-400 to-transparent mb-7" />
+                <div className="w-14 h-px bg-linear-to-r from-thistle-400 to-transparent mb-7" />
                 <div className="w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
                     <div className="flex flex-col gap-5 text-center">
                         <p className="font-cinzel text-white/60 text-sm leading-loose font-light tracking-wide">
@@ -127,15 +128,14 @@ export default function Home() {
                         </p>
                         <p className="font-cinzel text-white/60 text-sm leading-loose font-light tracking-wide">
                             When I'm not at university I spend most of my time on personal projects. My favourite to date is 
-                            the PasswordStrengthChecker which highlights my skills in machine learning. I've always enjoyed 
+                            the from scratch neural network in Rust which highlights my skills in machine learning. I've always enjoyed 
                             maths and physics and seeing how they shape my approach to problems.
                         </p>
                         <p className="font-cinzel text-white/60 text-sm leading-loose font-light tracking-wide">
                             When I'm not coding, you'll find me playing video games or consuming some work of science fiction. 
-                            I also play the bagpipes which is where my love from music came from.
                         </p>
                         <p className="font-cinzel text-white/60 text-sm leading-loose font-light tracking-wide">
-                            I am an optimistic, hard working and results driven individual who's always up for a challenge...
+                            I'm a dedicated student who's always willing to learn more about what interests me
                         </p>
                     </div>
                     <div className="flex flex-col gap-3">
@@ -154,20 +154,20 @@ export default function Home() {
                 </div>
             </section>
 
-            <div className="w-full h-px bg-linear-to-r from-transparent via-purple-700 to-transparent my-16" />
+            <div className="w-full h-px bg-linear-to-r from-transparent via-thistle-700 to-transparent my-16" />
 
             {/* Experience */}
             <section id='experience' className='min-h-screen w-full flex flex-col items-center justify-center px-10 py-20'>
                 <h2 className="font-cinzel text-sm tracking-[0.2em] uppercase text-white/40 mb-6">Experience</h2>
-                <div className="w-14 h-px bg-linear-to-r from-purple-400 to-transparent mb-7" />
+                <div className="w-14 h-px bg-linear-to-r from-thistle-400 to-transparent mb-7" />
                 <ExperienceTree />
             </section>
-            <div className="w-full h-px bg-linear-to-r from-transparent via-purple-700 to-transparent my-16" />
+            <div className="w-full h-px bg-linear-to-r from-transparent via-thistle-700 to-transparent my-16" />
 
             {/* Projects */}
             <section id="projects" className="min-h-screen flex flex-col items-center justify-center px-10 py-20">
                 <h2 className="font-cinzel text-sm tracking-[0.2em] uppercase text-white/40 mb-6">Projects</h2>
-                <div className="w-14 h-px bg-linear-to-r from-purple-400 to-transparent mb-7" />
+                <div className="w-14 h-px bg-linear-to-r from-thistle-400 to-transparent mb-7" />
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 w-full mb-5">
                     {PROJECTS.map((project, i) => (
                         <ProjectCard key={project.title} {...project} isHovered={activeIndex === null ? null : activeIndex === i ? true : false}
@@ -176,28 +176,28 @@ export default function Home() {
                     ))}
                 </div>
 
-                <Link className='font-cinzel text-xl mt-2 text-white/40 hover:text-purple-400/80' href={'/projects'}> View all →</Link>
-                <div className="w-25 h-px bg-linear-to-r from-purple-400 to-transparent mb-7" />
+                <Link className='font-cinzel text-xl mt-2 text-white/40 hover:text-thistle-400/80' href={'/projects'}> View all →</Link>
+                <div className="w-25 h-px bg-linear-to-r from-thistle-400 to-transparent mb-7" />
             </section>
 
-            <div className="w-full h-px bg-linear-to-r from-transparent via-purple-700 to-transparent my-10" />
+            <div className="w-full h-px bg-linear-to-r from-transparent via-thistle-700 to-transparent my-10" />
 
             {/* Skills */}
             <section id="skills" className="min-h-screen flex flex-col items-center justify-center px-10 py-20">
                 <h2 className="font-cinzel text-sm tracking-[0.2em] uppercase text-white/40 mb-6">Skills</h2>
-                <div className="w-14 h-px bg-linear-to-r from-purple-400 to-transparent mb-7" />
+                <div className="w-14 h-px bg-linear-to-r from-thistle-400 to-transparent mb-7" />
                 {/* <AnimatedSkills /> */}
                 <SkillsGrid skills={SKILLS} />
             </section>
 
-            <div className="w-full h-px bg-linear-to-r from-transparent via-purple-700 to-transparent my-16" />
+            <div className="w-full h-px bg-linear-to-r from-transparent via-thistle-700 to-transparent my-16" />
 
             {/* Contact */}
             <section id="contact" className="min-h-screen flex flex-col items-center justify-center px-10 py-20">
                 <h2 className="font-cinzel text-sm tracking-[0.2em] uppercase text-white/40 mb-6">Contact</h2>
-                <div className="w-14 h-px bg-linear-to-r from-purple-400 to-transparent mb-7" />
+                <div className="w-14 h-px bg-linear-to-r from-thistle-400 to-transparent mb-7" />
                 <p className="font-cinzel text-xs sm:text-sm tracking-[0.2em] uppercase text-white/70 mb-6">
-                    Feel free to reach out to me through email or Linkedin, or just check out my github
+                    Feel free to reach out to me through email or Linkedin, or check out my github
                 </p>
                 <div className="items-center justify-center grid grid-cols-3 gap-6 w-full">
                     <a           
@@ -206,14 +206,14 @@ export default function Home() {
                         rel="noopener noreferrer"
                         className="flex flex-col items-center gap-2 group"
                     >
-                        <Github size={32} color="#6b2ca5" className="group-hover:opacity-70 transition-opacity" />
+                        <Github size={32} color="#824F82" className="group-hover:opacity-70 transition-opacity" />
                         <span className="font-cinzel text-xs tracking-widest text-white/40 group-hover:text-white/70 transition-colors">GitHub</span>
                     </a>
                     <a
                         href="mailto:sam.g.leishman@gmail.com"
                         className="flex flex-col items-center gap-2 group"
                     >
-                        <Mail size={32} color="#6b2ca5" className="group-hover:opacity-70 transition-opacity" />
+                        <Mail size={32} color="#824F82" className="group-hover:opacity-70 transition-opacity" />
                         <span className="font-cinzel text-xs tracking-widest text-white/40 group-hover:text-white/70 transition-colors">Email</span>
                     </a>
                     <a
@@ -222,7 +222,7 @@ export default function Home() {
                         rel="noopener noreferrer"
                         className="flex flex-col items-center gap-2 group"
                     >
-                        <Linkedin size={32} color="#6b2ca5" className="group-hover:opacity-70 transition-opacity" />
+                        <Linkedin size={32} color="#824F82" className="group-hover:opacity-70 transition-opacity" />
                         <span className="font-cinzel text-xs tracking-widest text-white/40 group-hover:text-white/70 transition-colors">LinkedIn</span>
                     </a>
                 </div>

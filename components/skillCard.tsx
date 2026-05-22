@@ -49,10 +49,10 @@ const SkillCard = forwardRef<HTMLDivElement, SkillCardProps>(
                 className="group relative font-cinzel border border-white/10 hover:border-white/25 transition-colors duration-500 cursor-pointer text-left items-center self-stretch"
                 role="button"
             >
-                <span className="absolute top-0 left-0 w-2 h-px bg-purple-500/60" aria-hidden="true" />
-                <span className="absolute top-0 left-0 w-px h-2 bg-purple-500/60" aria-hidden="true" />
-                <span className="absolute bottom-0 right-0 w-2 h-px bg-purple-500/60" aria-hidden="true" />
-                <span className="absolute bottom-0 right-0 w-px h-2 bg-purple-500/60" aria-hidden="true" />
+                <span className="absolute top-0 left-0 w-2 h-px bg-thistle-500/60" aria-hidden="true" />
+                <span className="absolute top-0 left-0 w-px h-2 bg-thistle-500/60" aria-hidden="true" />
+                <span className="absolute bottom-0 right-0 w-2 h-px bg-thistle-500/60" aria-hidden="true" />
+                <span className="absolute bottom-0 right-0 w-px h-2 bg-thistle-500/60" aria-hidden="true" />
                 <div className="h-full px-5 py-4 sm:px-7 sm:py-6 flex items-center justify-between gap-3 sm:gap-5h-full">
                     <p className="text-white/70 text-xs sm:text-lg group-hover:text-white transition-colors duration-500">
                         {skill.name}
@@ -64,7 +64,7 @@ const SkillCard = forwardRef<HTMLDivElement, SkillCardProps>(
                                 key={level}
                                 className={`w-0.75 rounded-full transition-all duration-500 ${
                                     level <= bars
-                                        ? "bg-purple-500/80 group-hover:bg-purple-400"
+                                        ? "bg-thistle-500/80 group-hover:bg-thistle-400"
                                         : "bg-white/10"
                                 }`}
                                 style={{ height: `${level * 4 + 4}px` }}

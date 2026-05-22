@@ -62,7 +62,7 @@ export default function SkillsGrid({ skills }: SkillsGridProps) {
             {selectedIndex !== null && (
                 <div
                     ref={expandedRef}
-                    className="absolute inset-0 bg-[#0e0e0e] border border-purple-500/30 p-6 flex flex-col sm:flex-row text-left overflow-y-auto"
+                    className="absolute inset-0 bg-[#0e0e0e] border border-thistle-500/30 p-6 flex flex-col sm:flex-row text-left overflow-y-auto"
                 >
                     <button
                         onClick={() => setSelectedIndex(null)}
@@ -70,10 +70,10 @@ export default function SkillsGrid({ skills }: SkillsGridProps) {
                     >
                         ✕
                     </button>
-                    <span className="absolute top-0 left-0 w-4 h-px bg-purple-500/60" aria-hidden="true" />
-                    <span className="absolute top-0 left-0 w-px h-4 bg-purple-500/60" aria-hidden="true" />
-                    <span className="absolute bottom-0 right-0 w-4 h-px bg-purple-500/60" aria-hidden="true" />
-                    <span className="absolute bottom-0 right-0 w-px h-4 bg-purple-500/60" aria-hidden="true" />
+                    <span className="absolute top-0 left-0 w-4 h-px bg-thistle-500/60" aria-hidden="true" />
+                    <span className="absolute top-0 left-0 w-px h-4 bg-thistle-500/60" aria-hidden="true" />
+                    <span className="absolute bottom-0 right-0 w-4 h-px bg-thistle-500/60" aria-hidden="true" />
+                    <span className="absolute bottom-0 right-0 w-px h-4 bg-thistle-500/60" aria-hidden="true" />
 
                     <div className="w-full sm:w-3/5 sm:h-full flex flex-col justify-between border-b sm:border-b-0 sm:border-r border-white/5 pb-4 sm:pb-0 sm:pr-6">
                         <div>
@@ -81,7 +81,7 @@ export default function SkillsGrid({ skills }: SkillsGridProps) {
                             <p className="font-sans text-xs text-white/30 leading-relaxed text-left">{skills[selectedIndex].description}</p>
                         </div>
                         <div>
-                            <p className="font-cinzel text-xs tracking-[0.25em] uppercase text-purple-400/70 mb-1">{skills[selectedIndex].level}</p>
+                            <p className="font-cinzel text-xs tracking-[0.25em] uppercase text-thistle-400/70 mb-1">{skills[selectedIndex].level}</p>
                             <p className="font-sans text-xs text-white/30">{skills[selectedIndex].duration}</p>
                         </div>
                     </div>
@@ -89,11 +89,11 @@ export default function SkillsGrid({ skills }: SkillsGridProps) {
                     <div className="flex-1 sm:pl-6 flex flex-col gap-4 pt-4 sm:pt-0">
                         {skills[selectedIndex].projects && (
                             <div className="mt-auto">
-                            <p className="font-cinzel text-xs tracking-[0.25em] uppercase text-purple-400/70 mb-3">Projects</p>
+                            <p className="font-cinzel text-xs tracking-[0.25em] uppercase text-thistle-400/70 mb-3">Projects</p>
                             <div className="flex flex-wrap gap-2">
                                 {skills[selectedIndex].projects!.map((p) => (
                                     <a key={p.label} href={p.href} target="_blank" rel="noopener noreferrer"
-                                        className="font-sans text-xs text-purple-400/60 border border-purple-500/20 px-2 py-0.5 hover:text-purple-300 transition-colors">
+                                        className="font-sans text-xs text-thistle-400/60 border border-thistle-500/20 px-2 py-0.5 hover:text-thistle-300 transition-colors">
                                         ↗ {p.label}
                                     </a>
                                 ))}

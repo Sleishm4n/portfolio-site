@@ -5,16 +5,21 @@
 @tailwind utilities;
 
 @theme {
-  --color-polyGreen: #2C5530;
-  --color-rasin:  #191923;
-  --color-tang: #FF9D5C;
-  --color-silver: #CCCCCC;
-  --color-smoke: #F2F2F2;
-  --color-chineseBlack: #0D0F12;
-  --color-turquoise: #38F0B9;
-  --color-bryellow: #C59D62;
   --color-honeydew: #E9FAF5;
+  --color-thistle-50: #F5EFF5;
+  --color-thistle-100: #E4D3E4;
+  --color-thistle-200: #D8BFD8;
+  --color-thistle-300: #C19AC1;
+  --color-thistle-400: #B07DB0;
+  --color-thistle-500: #9E619E;
+  --color-thistle-600: #824F82;
+  --color-thistle-700: #653E65;
+  --color-thistle-800: #492D49;
+  --color-thistle-900: #2C1B2C;
+  --color-thistle-950: #100A10;
   --color-crayola: #F7D372;
+  --color-cards: #131218;
+  --color-brass: #C4A97D;
   --color-jungle: #1A1E24;
   --font-bebas: "Bebas Neue", sans-serif;
   --font-cinzel: 'Cinzel', 'serif';
@@ -32,19 +37,32 @@
   --color-tang: #FF9D5C;
   --color-silver: #CCCCCC;
   --color-smoke: #F2F2F2;
+  --color-brass: #C4A97D;
+  --color-thistle-50: #F5EFF5;
+  --color-thistle-100: #E4D3E4;
+  --color-thistle-200: #D8BFD8;
+  --color-thistle-300: #C19AC1;
+  --color-thistle-400: #B07DB0;
+  --color-thistle-500: #9E619E;
+  --color-thistle-600: #824F82;
+  --color-thistle-700: #653E65;
+  --color-thistle-800: #492D49;
+  --color-thistle-900: #2C1B2C;
+  --color-thistle-950: #100A10;
   --color-chineseBlack: #0D0F12;
   --color-turquoise: #38F0B9;
   --color-bryellow: #C59D62;
   --color-honeydew: #E9FAF5;
   --color-crayola: #F7D372;
   --color-jungle: #1A1E24;
+  --color-cards: #131218;
 }
 
 /* Global body styles */
 body {
   font-family: var(--font-inter);
-  background-color: #0D0F12; 
-  color: #CCCCCC; 
+  background: radial-gradient(circle at top, #0d1018 0%, #0f0e15 60%);  
+  color: #D4D0CC; 
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -91,4 +109,38 @@ code, pre {
 
 html {
   scroll-behavior: smooth;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    background-image: url("/perlin.png");
+    background-repeat: repeat;
+    background-size: 150px 150px;
+
+    opacity: 0.03;
+    mix-blend-mode: overlay;
+
+    pointer-events: none;
+    z-index: 9998;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    background:
+        repeating-linear-gradient(
+            to bottom,
+            rgba(255,255,255,0.012) 0px,
+            rgba(255,255,255,0.012) 1px,
+            transparent 1px,
+            transparent 2px
+        );
+
+    pointer-events: none;
+    z-index: 9999;
 }

@@ -26,10 +26,10 @@ export default function AboutCard({ label, value, sub, isHovered, onHover, onLea
                         border border-white/10 hover:border-white/25
                         transition-colors duration-500 cursor-default text-left h-full items-center"
         >
-            <span className="absolute top-0 left-0 w-2 h-px bg-purple-500/60" aria-hidden="true" />
-            <span className="absolute top-0 left-0 w-px h-2 bg-purple-500/60" aria-hidden="true" />
-            <span className="absolute bottom-0 right-0 w-2 h-px bg-purple-500/60" aria-hidden="true" />
-            <span className="absolute bottom-0 right-0 w-px h-2 bg-purple-500/60" aria-hidden="true" />
+            <span className="absolute top-0 left-0 w-2 h-px bg-thistle-500/60" aria-hidden="true" />
+            <span className="absolute top-0 left-0 w-px h-2 bg-thistle-500/60" aria-hidden="true" />
+            <span className="absolute bottom-0 right-0 w-2 h-px bg-thistle-500/60" aria-hidden="true" />
+            <span className="absolute bottom-0 right-0 w-px h-2 bg-thistle-500/60" aria-hidden="true" />
 
             <p className="text-[9.5px] tracking-[0.25em] uppercase text-white/30 mb-1.5">
                 {label}

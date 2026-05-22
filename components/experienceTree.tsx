@@ -14,10 +14,10 @@ export default function ExperienceTree() {
 
     return (
         <div ref={ref} className="relative min-h-screen w-full">
-            <div className="absolute left-4 sm:left-1/2 top-0 bottom-0 w-px bg-[#6b2ca5]/10" />
+            <div className="absolute left-4 sm:left-1/2 top-0 bottom-0 w-px bg-thistle-500/10" />
             <motion.div
                 style={{ height }}
-                className="absolute left-4 sm:left-1/2 top-0 w-px bg-[#6b2ca5] origin-top"
+                className="absolute left-4 sm:left-1/2 top-0 w-px bg-thistle-500 origin-top"
             />
             {experiences.map((exp) => (
                 <div className="relative w-full mb-16" key={exp.id}>
@@ -25,7 +25,7 @@ export default function ExperienceTree() {
                         initial={{ scale: 0 }}
                         whileInView={{ scale: 1 }}
                         transition={{ duration: 1, ease: 'easeOut' }}
-                        className="absolute left-4 sm:left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-[#6b2ca5]" />
+                        className="absolute left-4 sm:left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-thistle-500" />
                     <motion.div
                         initial={{ opacity: 0, x: exp.side === 'right' ? 40 : -40 }}
                         whileInView={{ opacity: 1, x: 0 }}
