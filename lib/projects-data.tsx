@@ -34,7 +34,7 @@ export const PROJECTS: Project[] = [
     description: `A CLI tool that generates commit messages from git diffs - started with heuristic rules, then upgraded to a local LLM for deeper understanding.`,
     learned: `Heuristics got me 80% of the way surprisingly fast. The LLM upgrade was less about accuracy and more about message quality - the basic version was correct but robotic.`,
     challenges:
-      "Getting the LLM to produce concise, conventional-commit-style messages without hallucinating context that wasn't in the diff. Originally had a example in the LLM prompt, the LLM however just return this example everytime.",
+      "Getting the LLM to produce concise, conventional-commit-style messages without hallucinating context that wasn't in the diff. Originally I had a example in the LLM prompt. The LLM, however, just returned this example every time.",
     tags: ["Python", "LLM", "CLI", "NLP", "Git"],
     href: "https://github.com/Sleishm4n/auto-git-commit",
     status: "Complete",
@@ -59,8 +59,8 @@ export const PROJECTS: Project[] = [
     description: `This site - built with Next.js 15, TypeScript, Tailwind v4, and Framer Motion. Designed from scratch with a focus on typography, motion, and a consistent design system.`,
     learned: `Everything in this site was a new experience to me. I learned about API keys through the Spotify widget. This was also my first introduction to Tailwind and Next.js, on top of this
         hosting the site through vercel and connecting to my remote Github repo was a new challenge. I've learned a great deal of important and useful web skills through this project.`,
-    challenges: `Maintaining a consistent design system across components without a UI library. Choosing what elements go where whilst keeping a users journey in minc. The challenge of making the site look
-      good on both desktop and mobile was harder than I orignally thought.`,
+    challenges: `Maintaining a consistent design system across components without a UI library. Choosing what elements go where whilst keeping a user's journey in mind. The challenge of making the site look
+      good on both desktop and mobile was harder than I originally thought.`,
     tags: ["Next.js", "TypeScript", "Tailwind", "Framer Motion", "Vercel"],
     href: "https://github.com/Sleishm4n/portfolio-site",
     status: "Ongoing",
@@ -79,16 +79,16 @@ export const PROJECTS: Project[] = [
         Getting Electron packaging right, from icon resolution to app path handling, took longer than expected for something that felt like it should be trivial.`,
     tags: ["Electron", "React", "TypeScript", "Jest", "Node.js", "MQTT"],
     status: "Complete",
-    date: "Sept 2025",
+    date: "Sep 2025",
   },
   {
     title: "Rust Neural Network",
     subtitle: "Neural Network",
-    description: `To better understand how neural networks work, I challenged myself to build a simple neural net from scratch in Rust, meaning no external libaries or crates. 
+    description: `To better understand how neural networks work, I challenged myself to build a simple neural net from scratch in Rust, meaning no external libraries or crates. 
     This meant creating my own Matrix struct and implementing all the basic functions for simple lin alg to then build up to more complicated parts such as, activation and loss functions. 
     Having built, trained and tested the nn on XOR, I then chose to implement a more generic Tensor struct to apply on MNIST dataset.`,
     learned: `I'm learning a great deal of Rust as this is my first major project utilising it. I'm learning more in depth about the behind the scenes of common ML libraries by implementing it myself.`,
-    challenges: `Working with systems/ Rust concepts such as borrowing has been challenging along with sytanx differences from other languages.`,
+    challenges: `Working with systems/ Rust concepts such as borrowing has been challenging along with syntax differences from other languages.`,
     tags: ["Rust", "Linear Algebra", "Machine Learning"],
     status: "Ongoing",
     date: "Mar 2026",
@@ -101,8 +101,8 @@ export const PROJECTS: Project[] = [
     learned: `Having never built a Chrome extension before, I learned how Manifest V3 works - including content scripts, message passing between the
    popup and page context, and securely handling API keys in a client-side environment. I also got hands-on experience with the Obsidian Local REST API and how to integrate it with a browser extension.`,
     challenges: `The trickiest part was getting Chrome to communicate with Obsidian's local HTTPS server - the self-signed certificate caused fetch requests 
-  to fail silently until I traced the issue and configured Chrome to trust the local origin. Scraping the artifact content from Claude's React-rendered DOM a
-  lso required careful inspection to find stable selectors, and converting the rendered HTML back to clean markdown with Turndown needed custom rules to preserve tables and heading styles.`,
+  to fail silently until I traced the issue and configured Chrome to trust the local origin. Scraping the artifact content from Claude's React-rendered DOM 
+  also required careful inspection to find stable selectors, and converting the rendered HTML back to clean markdown with Turndown needed custom rules to preserve tables and heading styles.`,
     tags: ["JavaScript","Chrome Extension","REST API","Obsidian","DOM Scraping",],
     status: "Complete",
     date: "Mar 2026",

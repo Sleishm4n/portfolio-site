@@ -27,17 +27,17 @@ export default function Home() {
             tags: ["Python", "scikit-learn", "NLP", "Security", "ML"],
             href: "https://github.com/Sleishm4n/PasswordStrengthChecker",
             status: 'Ongoing',
-            date: 'Jan 26'
+            date: 'Jan 2026'
         },
         {
             title: "Marine Sensor Dashboard",
             subtitle: "UofG Team Project - Systems & Data Visualisation",
             description: `A cross-platform desktop app built for Malin Group to monitor and visualise live marine sensor data during heavy marine lifts.
         Built with Electron and React, the app ingests real-time telemetry and presents it through an interactive dashboard designed for field operators.`,
-            tags: ["Python", "Rust", "C++", "Java", "Backtracking", "CSP"],
-            href: "https://github.com/Sleishm4n/Sudokus",
-            status: 'Ongoing',
-            date: 'Oct 25'
+            tags: ["Electron", "React", "TypeScript", "Jest", "Node.js", "MQTT"],
+            extHref: "https://malingroup.com",
+            status: 'Complete',
+            date: 'Sep 2025'
         },
         {
             title: "Git Auto-Commit",
@@ -46,7 +46,7 @@ export default function Home() {
             tags: ["Python", "LLM", "CLI", "NLP", "Git"],
             href: "https://github.com/Sleishm4n/auto-git-commit",
             status: 'Complete',
-            date: 'Feb 26'
+            date: 'Feb 2026'
         },
     ];
 
@@ -70,8 +70,8 @@ export default function Home() {
             sub: '',
         },
         {
-            label: "Favourite Superhero", value: "SpiderMan",
-            sub: '“With great power comes great responsibility',
+            label: "Favourite Superhero", value: "Spider-Man",
+            sub: '“With great power comes great responsibility”',
         },
         {
             label: "Currently reading", value: "Children of Dune",
@@ -98,7 +98,7 @@ export default function Home() {
                 <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">  
                     <AnimatedLetters text="Sam Leishman" onShuffleReady={(fn) => setShuffle(() => fn)} />
                     <p className="font-dm uppercase text-sm md:text-lg text-gray-400">
-                        Computing Science Student : University of Glasgow
+                        Computing Science student at the University of Glasgow
                     </p>
                     <div className="flex justify-center mb-2.5">
                         <ShuffleButton onClick={shuffle} />
@@ -120,21 +120,21 @@ export default function Home() {
                 <div className="w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
                     <div className="flex flex-col gap-5 text-center">
                         <p className="font-ibmPlex text-white/60 text-sm leading-loose font-light tracking-wide">
-                            Hi I'm Sam a third year comp-sci student at the University of Glasgow. My university projects 
+                            Hi, I'm Sam, a third-year Computing Science student at the University of Glasgow. My university projects 
                             have helped me grow as a software engineer in different areas including machine learning, 
                             algorithms and networking. I love solving problems and building things that tie in my personal
                              interests and my academic coursework.
                         </p>
                         <p className="font-ibmPlex text-white/60 text-sm leading-loose font-light tracking-wide">
-                            When I'm not at university I spend most of my time on personal projects. My favourite to date is 
-                            the from scratch neural network in Rust which highlights my skills in machine learning. I've always enjoyed 
+                            When I'm not at university I spend most of my time on personal projects. My favourite project so far is the 
+                            neural network I built from scratch in Rust which highlights my skills in machine learning. I've always enjoyed 
                             maths and physics and seeing how they shape my approach to problems.
                         </p>
                         <p className="font-ibmPlex text-white/60 text-sm leading-loose font-light tracking-wide">
                             When I'm not coding, you'll find me playing video games or consuming some work of science fiction. 
                         </p>
                         <p className="font-ibmPlex text-white/60 text-sm leading-loose font-light tracking-wide">
-                            I'm a dedicated student who's always willing to learn more about what interests me
+                            I'm especially interested in systems, machine learning, and building tools that are both useful and technically demanding.
                         </p>
                     </div>
                     <div className="flex flex-col gap-3">
@@ -196,7 +196,7 @@ export default function Home() {
                 <h2 className="font-dm text-sm tracking-[0.2em] uppercase text-white/40 mb-6">// Contact</h2>
                 <div className="w-14 h-px bg-linear-to-r from-thistle-400 to-transparent mb-7" />
                 <p className="font-ibmPlex text-xs sm:text-sm tracking-[0.2em] uppercase text-white/70 mb-6">
-                    Feel free to reach out to me through email or Linkedin, or check out my github
+                    Feel free to reach out to me through email or LinkedIn, or check out my GitHub
                 </p>
                 <div className="items-center justify-center grid grid-cols-3 gap-6 w-full">
                     <a           
