@@ -11,6 +11,7 @@ import { SKILLS } from '@/lib/skills-data';
 import SkillsGrid from '@/components/skillsGrid';
 import Link from 'next/link';
 import ExperienceTree from '@/components/experienceTree';
+import NetworkBackground from '@/components/networkBackground';
 
 export default function Home() {
     const [shuffleState, setShuffleState] = useState<{ run: () => void }>({ run: () => {} });
@@ -61,23 +62,15 @@ export default function Home() {
     return (
         <main className="min-h-screen w-full bg-bg flex flex-col items-center text-center">  
             {/* Hero Section */}
-            <section className="relative h-screen w-full flex flex-col items-center justify-center text-center px-6 overflow-hidden">
+            <section className="relative h-screen w-full flex flex-col items-center justify-center text-center px-6 overflow-hidden bg-transparent">
+                <NetworkBackground />
                 
-                <Image
-                    src="/hills2.jpg"
-                    alt=""
-                    fill
-                    priority
-                    className="
-                        object-cover object-center
-                        mask-[linear-gradient(to_bottom,black_0%,black_40%,transparent_100%)]
-                        [-webkit-mask-image:linear-gradient(to_bottom,black_0%,black_40%,transparent_100%)] 
-                    "
-                />
-                <div className="absolute inset-0 bg-black/50" />
-                
+                <div className="absolute inset-0 bg-linear-to-b from-transparent via-transparent to-transparent pointer-events-none z-0" />
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_30%,rgba(13,16,24,0.4)_100%)] pointer-events-none z-0" />
+
+                {/* Top Block: Profile Picture Box */}
                 <div className="relative z-10 flex items-center justify-center max-w-4xl mx-auto p-4 md:p-6">
-                    <div className="w-44 h-44 md:w-64 md:h-64 rounded-full flex items-center justify-center shadow-2xl transition-all duration-500 hover:scale-[1.02] border border-white/5 overflow-hidden">
+                    <div className="w-44 h-44 md:w-64 md:h-64 rounded-full flex items-center justify-center shadow-3xl border border-white/5 overflow-hidden bg-cards">
                         <Image 
                             src="/yose.jpg"
                             alt="Sam Leishman" 
@@ -89,6 +82,7 @@ export default function Home() {
                     </div>
                 </div>
 
+                {/* Bottom Block: Text & Info Box */}
                 <div className="relative z-10 max-w-4xl mx-auto px-6 text-center mt-2 space-y-4"> 
                     <div className="space-y-1">
                         <AnimatedLetters text="Sam Leishman" onShuffleReady={(fn) => setShuffleState({ run: fn })} />
@@ -106,9 +100,10 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
+                <div className="absolute bottom-0 left-0 w-full h-px bg-linear-to-r from-transparent via-thistle-700 to-transparent z-10" />
             </section>
 
-            <div className="w-full h-px bg-linear-to-r from-transparent via-thistle-700 to-transparent my-16" />
+            
 
             {/* About */}
             <section id="about" className="min-h-screen flex flex-col items-center justify-center px-10 py-20 max-w-4xl mx-auto p-6">
