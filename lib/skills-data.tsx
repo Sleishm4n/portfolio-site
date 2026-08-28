@@ -47,10 +47,9 @@ export const SKILLS: Skill[] = [
         level: "Familiar",
         duration: "~ 1 year",
         description:
-            `Applied ML to real problems across personal projects and university coursework. Built a password strength classifier using a Random Forest model trained on the RockYou dataset, extracting features from passwords, 
-            synthetically generating medium and strong examples, and appending ML-derived scores alongside rule-based features for final evaluation. Also integrated a local Ollama LLM into a CLI tool to auto-generate commit messages 
-            from git diffs. At Glasgow, studied Text as Data covering NLP techniques including classification, clustering, and n-gram analysis, and Data Fundamentals covering core ML theory and pipelines.`,
+            `Applied ML to real problems across personal projects and university coursework. Built mentats, a first-principles deep learning and neural network framework from scratch in Rust published on crates.io, implementing MNIST classifiers and Conditional VAEs. Also built a password strength classifier using Random Forest on the RockYou dataset, and integrated a local Ollama LLM into a git CLI tool. At Glasgow, studied Text as Data covering NLP techniques and Data Fundamentals covering core ML theory.`,
         projects: [
+            { label: "mentats", href: "https://github.com/Sleishm4n/mentats" },
             { label: "Password Evaluator", href: "https://github.com/Sleishm4n/PasswordStrengthChecker" },
             { label: "Git Auto-Commit", href: "https://github.com/Sleishm4n/auto-git-commit" },
         ],

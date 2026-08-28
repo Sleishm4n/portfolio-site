@@ -21,13 +21,14 @@ export default function Home() {
 
     const PROJECTS: Project[] = [
         {
-            title: "Password Strength Evaluator",
-            subtitle: "Machine Learning",
-            description: "A defensive password-strength checker using statistical patterns from leaked datasets. Combines entropy analysis, pattern detection, and ML models to estimate password predictability - without storing or cracking passwords.",
-            tags: ["Python", "scikit-learn", "NLP", "Security", "ML"],
-            href: "https://github.com/Sleishm4n/PasswordStrengthChecker",
+            title: "mentats",
+            subtitle: "First-Principles Deep Learning",
+            description: "A deep learning and neural network framework built from scratch in Rust with zero external crates and published on crates.io (~20 downloads). Implements custom tensors, SGD/Adam optimizers, a 97.43% MNIST classifier and Conditional VAEs (CVAE) with free-bits KL annealing.",
+            tags: ["Rust", "Deep Learning", "VAE / CVAE", "Linear Algebra", "Crates.io"],
+            href: "https://github.com/Sleishm4n/mentats",
+            cratesHref: "https://crates.io/crates/mentats",
             status: 'Ongoing',
-            date: 'Jan 2026'
+            date: 'Mar 2026'
         },
         {
             title: "Marine Sensor Dashboard",
@@ -118,8 +119,8 @@ export default function Home() {
                             interests and my academic coursework.
                         </p>
                         <p className="font-ibmPlex text-white/60 text-sm leading-loose font-light tracking-wide">
-                            When I'm not at university I spend most of my time on personal projects. My favourite project so far is the 
-                            neural network I built from scratch in Rust which highlights my skills in machine learning. I've always enjoyed 
+                            When I'm not at university I spend most of my time on personal projects. My favourite project so far is mentats, 
+                            the neural network framework I built from scratch in Rust which highlights my skills in machine learning. I've always enjoyed 
                             maths and physics and seeing how they shape my approach to problems.
                         </p>
                         <p className="font-ibmPlex text-white/60 text-sm leading-loose font-light tracking-wide">

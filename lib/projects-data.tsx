@@ -82,17 +82,16 @@ export const PROJECTS: Project[] = [
     date: "Sep 2025",
   },
   {
-    title: "Rust Neural Network",
-    subtitle: "Neural Network",
-    description: `To better understand how neural networks work, I challenged myself to build a simple neural net from scratch in Rust, meaning no external libraries or crates. 
-    This meant creating my own Matrix struct and implementing all the basic functions for simple lin alg to then build up to more complicated parts such as, activation and loss functions. 
-    Having built, trained and tested the nn on XOR, I then chose to implement a more generic Tensor struct to apply on MNIST dataset.`,
-    learned: `I'm learning a great deal of Rust as this is my first major project utilising it. I'm learning more in depth about the behind the scenes of common ML libraries by implementing it myself.`,
-    challenges: `Working with systems/ Rust concepts such as borrowing has been challenging along with syntax differences from other languages.`,
-    tags: ["Rust", "Linear Algebra", "Machine Learning"],
+    title: "mentats",
+    subtitle: "First-Principles Deep Learning Framework",
+    description: `A deep learning and neural network library built entirely from scratch in Rust with zero external dependencies, named after the human computers in Dune. Published on crates.io (~20 downloads). Features custom Tensor and Matrix primitives, automatic differentiation, SGD and Adam optimizers, categorical and binary cross-entropy losses, and activation layers. Progressed from achieving 97.43% test accuracy on an MNIST feedforward classifier to building Unconditional and Conditional Variational Autoencoders (CVAE) generating targeted digit classes from latent space vectors.`,
+    learned: `Deepened my understanding of deep learning maths by deriving and implementing backpropagation, Adam optimizer equations and the reparameterisation trick from first principles. Learned how to train generative models effectively—using free-bits KL divergence penalties and per-batch beta annealing to prevent posterior collapse in VAEs. Also gained substantial experience designing clean, idiomatic Rust library APIs for crates.io publication.`,
+    challenges: `Balancing reconstruction loss with KL divergence regularisation in VAEs without standard ML frameworks. Preventing posterior collapse required careful implementation of free-bits KL and per-batch annealing. In Rust, managing ownership, borrowing, and cache-friendly memory layouts for tensor operations without compromising execution speed was a rewarding systems challenge.`,
+    tags: ["Rust", "Deep Learning", "VAE / CVAE", "Linear Algebra", "First Principles", "Crates.io"],
     status: "Ongoing",
     date: "Mar 2026",
-    href: "https://github.com/Sleishm4n/rust-ml"
+    href: "https://github.com/Sleishm4n/mentats",
+    cratesHref: "https://crates.io/crates/mentats",
   },
   {
     title: "Claudian",

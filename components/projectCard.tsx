@@ -15,6 +15,7 @@ export interface Project {
     challenges?: string;
     liveHref?: string;
     extHref?: string;
+    cratesHref?: string;
     terminal?: Line[];
     isHovered?: boolean | null;
     onHover?: () => void; 
@@ -23,7 +24,7 @@ export interface Project {
 
 
 
-export default function ProjectCard({ title, subtitle, description, status, date, tags, image, href, learned, challenges, liveHref, extHref, terminal, isHovered, onHover, onLeave }: Project) {    const statusStyles: Record<string, string> = {
+export default function ProjectCard({ title, subtitle, description, status, date, tags, image, href, learned, challenges, liveHref, extHref, cratesHref, terminal, isHovered, onHover, onLeave }: Project) {    const statusStyles: Record<string, string> = {
         'Ongoing':   'bg-green-500/15 text-green-400 border border-green-500/30',
         'Complete':  'bg-blue-500/15 text-blue-400 border border-blue-500/30',
         'Exploring': 'bg-amber-500/15 text-amber-400 border border-amber-500/30',
@@ -137,6 +138,13 @@ export default function ProjectCard({ title, subtitle, description, status, date
                         className="text-xs font-sans tracking-wider text-thistle-400/70 border border-thistle-500/30 px-3 py-1.5 bg-thistle-500/10
                                     hover:text-thistle-300 hover:border-thistle-500/60 transition-all duration-300">
                             Live Demo ↗
+                        </a>
+                    )}
+                    {cratesHref && (
+                        <a href={cratesHref} target="_blank" rel="noopener noreferrer"
+                        className="text-xs font-sans tracking-wider text-thistle-400/70 border border-thistle-500/30 px-3 py-1.5 bg-thistle-500/10
+                                    hover:text-thistle-300 hover:border-thistle-500/60 transition-all duration-300">
+                            crates.io ↗
                         </a>
                     )}
                     {extHref && (
