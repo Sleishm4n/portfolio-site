@@ -5,6 +5,7 @@ import { describe, it, expect } from 'vitest'
 describe('Hero', () => {
   it('renders Sam Leishman', () => {
     render(<Home />)
-    expect(screen.getByText(/sam leishman/i)).toBeInTheDocument()
+    const heading = screen.getByRole('heading', { level: 1 })
+    expect(heading).toHaveTextContent(/sam\s+leishman/i)
   })
 })

@@ -16,9 +16,17 @@ export default function NowPlaying() {
 
     useEffect(() => {
         const fetchSong = async () => {
-            const res = await fetch("/api/spotify");
-            const data = await res.json();
-            setSong(data);
+            try {
+                const res = await fetch("/api/spotify");
+                if (!res.ok) {
+                    setSong({ isPlaying: false });
+                    return;
+                }
+                const data = await res.json();
+                setSong(data);
+            } catch {
+                setSong({ isPlaying: false });
+            }
         };
 
         fetchSong();
