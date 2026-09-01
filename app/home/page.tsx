@@ -27,6 +27,7 @@ export default function Home() {
             tags: ["Rust", "Deep Learning", "VAE / CVAE", "Linear Algebra", "Crates.io"],
             href: "https://github.com/Sleishm4n/mentats",
             cratesHref: "https://crates.io/crates/mentats",
+            liveHref: "/mentats",
             status: 'Ongoing',
             date: 'Mar 2026'
         },

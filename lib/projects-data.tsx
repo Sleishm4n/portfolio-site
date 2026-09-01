@@ -2,18 +2,29 @@ import { Project } from "@/components/projectCard";
 
 export const PROJECTS: Project[] = [
   {
-    title: "Password Strength Evaluator",
-    subtitle: "Machine Learning",
-    description: `A defensive password-strength checker that uses statistical patterns from leaked datasets. Combines entropy analysis, 
-        pattern detection and ML models to estimate password predictability - without storing or cracking passwords.`,
-    learned: `Working with the RockYou dataset exposed how predictable human password choices really are. Feature engineering for 
-        text-based ML is harder than it looks - defining what makes a pattern took longer than building the model itself.`,
-    challenges:
-      "Balancing recall vs precision for weak password detection. If I rebuilt this I'd spend more time on the feature pipeline before touching the model.",
-    tags: ["Python", "scikit-learn", "NLP", "Security", "ML", "Random Forest"],
-    href: "https://github.com/Sleishm4n/PasswordStrengthChecker",
+    title: "mentats",
+    subtitle: "First-Principles Deep Learning Framework",
+    description: `A deep learning and neural network library built entirely from scratch in Rust with zero external dependencies, named after the human computers in Dune. 
+    Published on crates.io (~20 downloads). Features custom Tensor and Matrix primitives, automatic differentiation, SGD and Adam optimizers, categorical and binary cross-entropy losses, and activation layers. 
+    Progressed from achieving 97.43% test accuracy on an MNIST feedforward classifier to building Unconditional and Conditional Variational Autoencoders (CVAE) generating targeted digit classes from latent space vectors.`,
+    learned: `Deepened my understanding of deep learning maths by deriving and implementing backpropagation, Adam optimizer equations and the reparameterisation trick from first principles. 
+    Learned how to train generative models effectively—using free-bits KL divergence penalties and per-batch beta annealing to prevent posterior collapse in VAEs. 
+    Also gained substantial experience designing clean, idiomatic Rust library APIs for crates.io publication.`,
+    challenges: `Balancing reconstruction loss with KL divergence regularisation in VAEs without standard ML frameworks. 
+    Preventing posterior collapse required careful implementation of free-bits KL and per-batch annealing. In Rust, managing ownership, borrowing, and cache-friendly memory layouts for tensor operations without compromising execution speed was a rewarding systems challenge.`,
+    tags: [
+      "Rust",
+      "Deep Learning",
+      "VAE / CVAE",
+      "Linear Algebra",
+      "First Principles",
+      "Crates.io",
+    ],
     status: "Ongoing",
-    date: "Jan 2026",
+    date: "Mar 2026",
+    href: "https://github.com/Sleishm4n/mentats",
+    cratesHref: "https://crates.io/crates/mentats",
+    liveHref: "/mentats",
   },
   {
     title: "Multi-Language Sudoku Solver",
@@ -40,18 +51,23 @@ export const PROJECTS: Project[] = [
     status: "Complete",
     date: "Feb 2026",
     terminal: [
-      { type: "cmd",     text: "python auto-git-commit/main.py" },
-      { type: "output",  text: "Changes to be commited:" },
-      { type: "output",  text: "modified:   components/projectCard.tsx modified:   lib/projects-data.tsx new file:   public/barge.jpg new file:   public/cityStars.jpg" },
-      { type: "label",   text: "SUBJECT:" },
-      { type: "output",  text: "Add cityStars images to project card" },
-      { type: "label",   text: "Description:"},
-      { type: "output",  text: 'Two new JPG files, `public/cityStars.jpg` and `public/barge.jpg`, have been added to represent projects within the component. The changes were committed as part of updating the project data for better representation in UI components.' },
-      { type: "label",   text: "PROCEED? [Y/n]" },
-      { type: "prompt",  text: "y" },
+      { type: "cmd", text: "python auto-git-commit/main.py" },
+      { type: "output", text: "Changes to be commited:" },
+      {
+        type: "output",
+        text: "modified:   components/projectCard.tsx modified:   lib/projects-data.tsx new file:   public/barge.jpg new file:   public/cityStars.jpg",
+      },
+      { type: "label", text: "SUBJECT:" },
+      { type: "output", text: "Add cityStars images to project card" },
+      { type: "label", text: "Description:" },
+      {
+        type: "output",
+        text: "Two new JPG files, `public/cityStars.jpg` and `public/barge.jpg`, have been added to represent projects within the component. The changes were committed as part of updating the project data for better representation in UI components.",
+      },
+      { type: "label", text: "PROCEED? [Y/n]" },
+      { type: "prompt", text: "y" },
       { type: "success", text: "Commit created successfully!" },
     ],
-
   },
   {
     title: "Portfolio Site",
@@ -82,16 +98,18 @@ export const PROJECTS: Project[] = [
     date: "Sep 2025",
   },
   {
-    title: "mentats",
-    subtitle: "First-Principles Deep Learning Framework",
-    description: `A deep learning and neural network library built entirely from scratch in Rust with zero external dependencies, named after the human computers in Dune. Published on crates.io (~20 downloads). Features custom Tensor and Matrix primitives, automatic differentiation, SGD and Adam optimizers, categorical and binary cross-entropy losses, and activation layers. Progressed from achieving 97.43% test accuracy on an MNIST feedforward classifier to building Unconditional and Conditional Variational Autoencoders (CVAE) generating targeted digit classes from latent space vectors.`,
-    learned: `Deepened my understanding of deep learning maths by deriving and implementing backpropagation, Adam optimizer equations and the reparameterisation trick from first principles. Learned how to train generative models effectively—using free-bits KL divergence penalties and per-batch beta annealing to prevent posterior collapse in VAEs. Also gained substantial experience designing clean, idiomatic Rust library APIs for crates.io publication.`,
-    challenges: `Balancing reconstruction loss with KL divergence regularisation in VAEs without standard ML frameworks. Preventing posterior collapse required careful implementation of free-bits KL and per-batch annealing. In Rust, managing ownership, borrowing, and cache-friendly memory layouts for tensor operations without compromising execution speed was a rewarding systems challenge.`,
-    tags: ["Rust", "Deep Learning", "VAE / CVAE", "Linear Algebra", "First Principles", "Crates.io"],
+    title: "Password Strength Evaluator",
+    subtitle: "Machine Learning",
+    description: `A defensive password-strength checker that uses statistical patterns from leaked datasets. Combines entropy analysis, 
+        pattern detection and ML models to estimate password predictability - without storing or cracking passwords.`,
+    learned: `Working with the RockYou dataset exposed how predictable human password choices really are. Feature engineering for 
+        text-based ML is harder than it looks - defining what makes a pattern took longer than building the model itself.`,
+    challenges:
+      "Balancing recall vs precision for weak password detection. If I rebuilt this I'd spend more time on the feature pipeline before touching the model.",
+    tags: ["Python", "scikit-learn", "NLP", "Security", "ML", "Random Forest"],
+    href: "https://github.com/Sleishm4n/PasswordStrengthChecker",
     status: "Ongoing",
-    date: "Mar 2026",
-    href: "https://github.com/Sleishm4n/mentats",
-    cratesHref: "https://crates.io/crates/mentats",
+    date: "Jan 2026",
   },
   {
     title: "Claudian",
@@ -102,7 +120,13 @@ export const PROJECTS: Project[] = [
     challenges: `The trickiest part was getting Chrome to communicate with Obsidian's local HTTPS server - the self-signed certificate caused fetch requests 
   to fail silently until I traced the issue and configured Chrome to trust the local origin. Scraping the artifact content from Claude's React-rendered DOM 
   also required careful inspection to find stable selectors, and converting the rendered HTML back to clean markdown with Turndown needed custom rules to preserve tables and heading styles.`,
-    tags: ["JavaScript","Chrome Extension","REST API","Obsidian","DOM Scraping",],
+    tags: [
+      "JavaScript",
+      "Chrome Extension",
+      "REST API",
+      "Obsidian",
+      "DOM Scraping",
+    ],
     status: "Complete",
     date: "Mar 2026",
     href: "https://github.com/Sleishm4n/claudian",

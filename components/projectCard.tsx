@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 import TerminalPreview, { Line } from '@/components/teminalPreview';
 
 export interface Project {
@@ -125,32 +126,40 @@ export default function ProjectCard({ title, subtitle, description, status, date
                     ))}
                 </div>
             )}
-                <div className="flex gap-3 mt-auto pt-4">
+                <div className="flex flex-wrap items-center gap-2 mt-auto pt-4">
                     {href && (
                         <a href={href} target="_blank" rel="noopener noreferrer"
-                        className="text-xs font-sans tracking-wider text-white/50 border border-white/20 px-3 py-1.5
-                                    hover:text-gray-400 hover:white-500/40 transition-all duration-300">
+                        className="text-xs font-sans tracking-wider text-white/50 border border-white/20 px-2.5 py-1.5 whitespace-nowrap shrink-0
+                                    hover:text-gray-400 hover:border-white/40 transition-all duration-300">
                             GitHub ↗
                         </a>
                     )}
                     {liveHref && (
-                        <a href={liveHref} target="_blank" rel="noopener noreferrer"
-                        className="text-xs font-sans tracking-wider text-thistle-400/70 border border-thistle-500/30 px-3 py-1.5 bg-thistle-500/10
-                                    hover:text-thistle-300 hover:border-thistle-500/60 transition-all duration-300">
-                            Live Demo ↗
-                        </a>
+                        liveHref.startsWith('/') ? (
+                            <Link href={liveHref}
+                            className="text-xs font-sans tracking-wider text-thistle-400/80 border border-thistle-500/40 px-2.5 py-1.5 bg-thistle-500/15 whitespace-nowrap shrink-0
+                                        hover:text-thistle-200 hover:border-thistle-400 hover:bg-thistle-500/25 transition-all duration-300">
+                                Live Demo ↗
+                            </Link>
+                        ) : (
+                            <a href={liveHref} target="_blank" rel="noopener noreferrer"
+                            className="text-xs font-sans tracking-wider text-thistle-400/80 border border-thistle-500/40 px-2.5 py-1.5 bg-thistle-500/15 whitespace-nowrap shrink-0
+                                        hover:text-thistle-200 hover:border-thistle-400 hover:bg-thistle-500/25 transition-all duration-300">
+                                Live Demo ↗
+                            </a>
+                        )
                     )}
                     {cratesHref && (
                         <a href={cratesHref} target="_blank" rel="noopener noreferrer"
-                        className="text-xs font-sans tracking-wider text-thistle-400/70 border border-thistle-500/30 px-3 py-1.5 bg-thistle-500/10
+                        className="text-xs font-sans tracking-wider text-thistle-400/70 border border-thistle-500/30 px-2.5 py-1.5 bg-thistle-500/10 whitespace-nowrap shrink-0
                                     hover:text-thistle-300 hover:border-thistle-500/60 transition-all duration-300">
                             crates.io ↗
                         </a>
                     )}
                     {extHref && (
                         <a href={extHref} target="_blank" rel="noopener noreferrer"
-                        className="text-xs font-sans tracking-wider text-white/50 border border-white/20 px-3 py-1.5
-                                    hover:text-gray-400 hover:white-500/40 transition-all duration-300">
+                        className="text-xs font-sans tracking-wider text-white/50 border border-white/20 px-2.5 py-1.5 whitespace-nowrap shrink-0
+                                    hover:text-gray-400 hover:border-white/40 transition-all duration-300">
                             Malin ↗
                         </a>
                     )}
