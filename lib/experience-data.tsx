@@ -1,3 +1,5 @@
+import { RiOutlet2Line } from "react-icons/ri";
+
 export const experiences = [
   {
     id: 1,
@@ -19,6 +21,14 @@ export const experiences = [
   {
     id: 3,
     side: "right" as const,
+    period: "Jun - Aug 2026",
+    organisation: "Ciena",
+    role: "Routing IP Software Intern",
+    points: ["Self Serve Regression", "CRSA Certification", "NLP CLI involvement"]
+  },
+  {
+    id: 4,
+    side: "left" as const,
     period: "2023 - 2027",
     organisation: "University of Glasgow",
     role: "BSc Computing Science",
