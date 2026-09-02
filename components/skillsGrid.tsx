@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useLayoutEffect, useRef, useState } from "react";
+import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 import SkillCard, { Skill } from "./skillCard";
 
 interface SkillsGridProps {
@@ -15,6 +15,16 @@ export default function SkillsGrid({ skills }: SkillsGridProps) {
     const expandedRef = useRef<HTMLDivElement>(null);
     const [activeIndex, setHoveredIndex] = useState<number | null>(null);
 
+    useEffect(() => {
+        if (selectedIndex === null) return;
+        const handleKeyDown = (e: KeyboardEvent) => {
+            if (e.key === "Escape") {
+                setSelectedIndex(null);
+            }
+        };
+        window.addEventListener("keydown", handleKeyDown);
+        return () => window.removeEventListener("keydown", handleKeyDown);
+    }, [selectedIndex]);
 
     useLayoutEffect(() => {
         if (selectedIndex === null || !firstRect.current || !gridRef.current) return;

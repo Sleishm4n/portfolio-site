@@ -53,7 +53,7 @@ const SkillCard = forwardRef<HTMLDivElement, SkillCardProps>(
                 <span className="absolute top-0 left-0 w-px h-2 bg-thistle-500/60" aria-hidden="true" />
                 <span className="absolute bottom-0 right-0 w-2 h-px bg-thistle-500/60" aria-hidden="true" />
                 <span className="absolute bottom-0 right-0 w-px h-2 bg-thistle-500/60" aria-hidden="true" />
-                <div className="h-full px-5 py-4 sm:px-7 sm:py-6 flex items-center justify-between gap-3 sm:gap-5h-full">
+                <div className="h-full px-5 py-4 sm:px-7 sm:py-6 flex items-center justify-between gap-3 sm:gap-5">
                     <p className="text-white/70 text-xs sm:text-lg group-hover:text-white transition-colors duration-500">
                         {skill.name}
                     </p>
