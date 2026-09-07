@@ -52,13 +52,13 @@ export default function Home() {
     ];
 
     const ABOUTS: AboutCardProps[] = [
-        { label: "Currently", value: "BSc Computing Science", sub: "University of Glasgow | 3rd Year" },
-        { label: "This Summer", value: "Ciena", sub: "Returning Intern" },
+        { label: "Currently", value: "BSc Computing Science", sub: "University of Glasgow | 4th Year" },
+        { label: "This year", value: "UofG", sub: "4th and final year student" },
         { label: "Computing Interests", value: "Machine Learning | Algorithms | Networks", sub: '' },
         { label: "Favourite Problems", value: "Algorithmic Challenges", sub: '' },
         { label: "Beyond the screen", value: "Gym | Scout Leader | Cooking/Baking", sub: '' },
         { label: "Favourite Superhero", value: "Spider-Man", sub: '“With great power comes great responsibility”' },
-        { label: "Currently reading", value: "Children of Dune", sub: '“Most deadly errors arise from obsolete assumptions.”' },        
+        { label: "Currently reading", value: "God Emperor of Dune", sub: '“In the view of infinity, any defined long-term is short-term”' },        
     ];
 
     return (
@@ -114,7 +114,7 @@ export default function Home() {
                 <div className="w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
                     <div className="flex flex-col gap-5 text-center">
                         <p className="font-ibmPlex text-white/60 text-sm leading-loose font-light tracking-wide">
-                            Hi, I'm Sam, a third-year Computing Science student at the University of Glasgow. My university projects 
+                            Hi, I'm Sam, a fourth-year Computing Science student at the University of Glasgow. My university projects 
                             have helped me grow as a software engineer in different areas including machine learning, 
                             algorithms and networking. I love solving problems and building things that tie in my personal
                             interests and my academic coursework.
