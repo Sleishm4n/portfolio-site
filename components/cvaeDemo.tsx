@@ -63,10 +63,10 @@ export default function CvaeDemo() {
         const val = Math.max(0, Math.min(1, pixels[i]));
         const idx = i * 4;
 
-        // Dark background -> Glowing thistle/lavender digit
-        data[idx] = Math.round(18 + val * (216 - 18)); // R
-        data[idx + 1] = Math.round(14 + val * (191 - 14)); // G
-        data[idx + 2] = Math.round(26 + val * (216 - 26)); // B
+        // Dark background -> Clean, normal blue digit
+        data[idx] = Math.round(16 + val * (60 - 16)); // R
+        data[idx + 1] = Math.round(18 + val * (130 - 18)); // G
+        data[idx + 2] = Math.round(24 + val * (245 - 24)); // B
         data[idx + 3] = 255;
       }
 
@@ -123,7 +123,7 @@ export default function CvaeDemo() {
   if (loading) {
     return (
       <div className="w-full max-w-xl mx-auto p-12 border border-white/10 bg-cards/5 backdrop-blur-md text-center flex flex-col items-center justify-center min-h-[280px]">
-        <div className="w-6 h-6 border border-thistle-400 border-t-transparent rounded-full animate-spin mb-4" />
+        <div className="w-6 h-6 border border-sky-400 border-t-transparent rounded-full animate-spin mb-4" />
         <p className="font-space text-xs tracking-[0.2em] uppercase text-white/40">
           Loading Mentats Model...
         </p>
@@ -146,26 +146,26 @@ export default function CvaeDemo() {
     <div className="group relative w-full max-w-2xl mx-auto p-4 sm:p-8 md:p-10 font-ibmPlex bg-cards/5 backdrop-blur-md border border-white/10 transition-all text-left">
       {/* Corner Accents matching site cards */}
       <span
-        className="absolute top-0 left-0 w-3 h-px bg-thistle-500/60"
+        className="absolute top-0 left-0 w-3 h-px bg-sky-400/60"
         aria-hidden="true"
       />
       <span
-        className="absolute top-0 left-0 w-px h-3 bg-thistle-500/60"
+        className="absolute top-0 left-0 w-px h-3 bg-sky-400/60"
         aria-hidden="true"
       />
       <span
-        className="absolute bottom-0 right-0 w-3 h-px bg-thistle-500/60"
+        className="absolute bottom-0 right-0 w-3 h-px bg-sky-400/60"
         aria-hidden="true"
       />
       <span
-        className="absolute bottom-0 right-0 w-px h-3 bg-thistle-500/60"
+        className="absolute bottom-0 right-0 w-px h-3 bg-sky-400/60"
         aria-hidden="true"
       />
 
       <div className="flex flex-col md:flex-row items-center gap-5 sm:gap-8 md:gap-10">
         {/* Crisp Pixel Display */}
         <div className="flex flex-col items-center shrink-0">
-          <div className="p-2 sm:p-2.5 bg-black/60 border border-thistle-500/20 shadow-lg">
+          <div className="p-2 sm:p-2.5 bg-black/60 border border-white/10">
             <canvas
               ref={canvasRef}
               width={196}
@@ -177,7 +177,7 @@ export default function CvaeDemo() {
 
           <button
             onClick={handleGenerateNewStyle}
-            className="mt-3 sm:mt-4 text-xs font-sans tracking-wider text-thistle-400/80 border border-thistle-500/30 px-3.5 py-1.5 bg-thistle-500/10 hover:text-thistle-300 hover:border-thistle-500/60 transition-all duration-300 flex items-center gap-1.5"
+            className="mt-3 sm:mt-4 text-xs font-sans tracking-wider text-sky-400/80 border border-sky-500/30 px-3.5 py-1.5 bg-sky-500/10 hover:text-sky-300 hover:border-sky-500/60 transition-all duration-300 flex items-center gap-1.5"
           >
             <span>New Variation</span> ↗
           </button>
@@ -186,7 +186,7 @@ export default function CvaeDemo() {
         {/* Controls Section */}
         <div className="flex-1 w-full space-y-4 sm:space-y-6">
           <div>
-            <p className="text-[10px] tracking-[0.25em] uppercase text-thistle-400/70 font-space mb-2">
+            <p className="text-[10px] tracking-[0.25em] uppercase text-sky-400/70 font-space mb-2">
               Target Digit Class
             </p>
             <div className="grid grid-cols-5 sm:grid-cols-10 gap-1.5 sm:gap-2">
@@ -199,7 +199,7 @@ export default function CvaeDemo() {
                   }}
                   className={`h-8 sm:h-9 md:h-10 font-cinzel text-sm sm:text-base transition-all duration-300 border ${
                     selectedDigit === digit && (!isMorphMode || morphT === 0)
-                      ? "bg-thistle-500/20 text-white border-thistle-400 shadow-sm"
+                      ? "bg-sky-500/20 text-white border-sky-400 shadow-sm"
                       : "bg-white/5 text-white/50 border-white/10 hover:text-white hover:border-white/30"
                   }`}
                 >
@@ -217,13 +217,13 @@ export default function CvaeDemo() {
                   setIsMorphMode(!isMorphMode);
                   if (isMorphMode) setMorphT(0);
                 }}
-                className="text-[10px] tracking-[0.2em] uppercase font-space text-white/40 hover:text-thistle-300 transition-colors flex items-center gap-1.5"
+                className="text-[10px] tracking-[0.2em] uppercase font-space text-white/40 hover:text-sky-300 transition-colors flex items-center gap-1.5"
               >
                 <span>{isMorphMode ? "−" : "+"}</span> Latent Morphing Tool
               </button>
 
               {isMorphMode && (
-                <span className="text-[10px] sm:text-[11px] font-space text-thistle-400/80">
+                <span className="text-[10px] sm:text-[11px] font-space text-sky-400/80">
                   {selectedDigit} → {morphDigitB} ({(morphT * 100).toFixed(0)}%)
                 </span>
               )}
@@ -240,7 +240,7 @@ export default function CvaeDemo() {
                         onClick={() => setMorphDigitB(d)}
                         className={`w-5 h-5 sm:w-6 sm:h-6 font-cinzel text-[11px] sm:text-xs border ${
                           morphDigitB === d
-                            ? "bg-thistle-500/30 text-white border-thistle-400"
+                            ? "bg-sky-500/30 text-white border-sky-400"
                             : "bg-transparent text-white/40 border-transparent hover:text-white"
                         }`}
                       >
@@ -257,7 +257,7 @@ export default function CvaeDemo() {
                   step="0.01"
                   value={morphT}
                   onChange={(e) => setMorphT(parseFloat(e.target.value))}
-                  className="w-full accent-thistle-400 h-2 bg-white/10 rounded cursor-pointer"
+                  className="w-full accent-sky-400 h-2 bg-white/10 rounded cursor-pointer"
                 />
               </div>
             )}
